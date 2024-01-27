@@ -1,9 +1,6 @@
 #ifndef PHONEBOOK_HPP
 #define PHONEBOOK_HPP
 
-#include <functional>
-#include <iomanip>
-#include <iostream>
 #include <string>
 
 class Contact {
