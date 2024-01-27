@@ -15,6 +15,9 @@ fclean:
 
 re: fclean all
 
+bear: fclean
+	@bear -- make all
+
 format:
 	@$(foreach dir,$(SUBDIRS),$(MAKE) -C $(dir) format;)
 
