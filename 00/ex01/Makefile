@@ -14,4 +14,7 @@ fclean: clean
 
 re: fclean all
 
+format:
+	@clang-format -i $(SRC) $(HEADERS)
+
 .PHONY: all clean fclean re

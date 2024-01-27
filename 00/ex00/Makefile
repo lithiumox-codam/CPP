@@ -13,4 +13,7 @@ fclean: clean
 
 re: fclean all
 
+format:
+	@clang-format -i $(SRC)
+
 .PHONY: all clean fclean re

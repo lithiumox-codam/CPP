@@ -1,0 +1,34 @@
+[
+    {
+        "arguments": [
+            "/opt/homebrew/opt/llvm/bin/clang++",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-o",
+            "megaphone",
+            "megaphone.cpp"
+        ],
+        "directory": "/Users/lithium/Projects/Codam_org/CPP/00/ex00",
+        "file": "/Users/lithium/Projects/Codam_org/CPP/00/ex00/megaphone.cpp",
+        "output": "/Users/lithium/Projects/Codam_org/CPP/00/ex00/megaphone"
+    },
+    {
+        "arguments": [
+            "/opt/homebrew/opt/llvm/bin/clang++",
+            "-c",
+            "-Wall",
+            "-Wextra",
+            "-Werror",
+            "-I",
+            "phonebook.hpp",
+            "-o",
+            "phonebook",
+            "phonebook.cpp"
+        ],
+        "directory": "/Users/lithium/Projects/Codam_org/CPP/00/ex01",
+        "file": "/Users/lithium/Projects/Codam_org/CPP/00/ex01/phonebook.cpp",
+        "output": "/Users/lithium/Projects/Codam_org/CPP/00/ex01/phonebook"
+    }
+]

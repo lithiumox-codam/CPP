@@ -6,14 +6,14 @@
 #include <string>
 
 class Contact {
-private:
+ private:
   std::string first_name;
   std::string last_name;
   std::string nickname;
   std::string darkest_secret;
   std::string phone_number;
 
-public:
+ public:
   void set_first_name(std::string first_name) {
     this->first_name = first_name;
   };
@@ -33,15 +33,15 @@ public:
 };
 
 class PhoneBook {
-private:
+ private:
   Contact contacts[8];
   int contact_count;
 
-public:
+ public:
   PhoneBook();
   void add_contact();
   void search_contact();
   void print_contact(int index);
 };
 
-#endif // PHONEBOOK_HPP
+#endif  // PHONEBOOK_HPP
