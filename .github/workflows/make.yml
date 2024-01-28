@@ -1,0 +1,23 @@
+name: Make CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: make
+      run: |
+        make
+        make_status=$?
+        if [ $make_status -ne 0 ]; then
+          echo "Make failed with exit code $make_status"
+          exit $make_status
+        fi
