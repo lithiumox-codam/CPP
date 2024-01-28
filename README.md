@@ -1,6 +1,6 @@
-# My C++ monorepo!
+# My CPP monorepo!
 
-This is my C++ monorepo. It does some cool stuff like implement clang tooling and a global makefile to build all the things. It will contain all the C++ projects I need to do in the 42 curriculum.
+This is my CPP monorepo. It does some cool stuff like implement clang tooling and a global makefile to build all the things. It will contain all the CPP projects I need to do in the 42 curriculum.
 
 ## How to build
 
