@@ -22,7 +22,7 @@
       "-Wextra",
       "-Werror",
       "-I",
-      "phonebook.hpp",
+      ".",
       "-o",
       "phonebook",
       "phonebook.cpp"
@@ -39,7 +39,7 @@
       "-Wextra",
       "-Werror",
       "-I",
-      "Zombie.hpp",
+      ".",
       "-o",
       "zombie",
       "newZombie.cpp"
@@ -56,7 +56,7 @@
       "-Wextra",
       "-Werror",
       "-I",
-      "Zombie.hpp",
+      ".",
       "-o",
       "zombie",
       "randomChump.cpp"
@@ -73,7 +73,7 @@
       "-Wextra",
       "-Werror",
       "-I",
-      "Zombie.hpp",
+      ".",
       "-o",
       "zombie",
       "zombie.cpp"
@@ -90,7 +90,7 @@
       "-Wextra",
       "-Werror",
       "-I",
-      "Zombie.hpp",
+      ".",
       "-o",
       "zombie",
       "main.cpp"
@@ -107,7 +107,7 @@
       "-Wextra",
       "-Werror",
       "-I",
-      "Zombie.hpp",
+      ".",
       "-o",
       "zombie",
       "Zombie.cpp"
@@ -124,7 +124,7 @@
       "-Wextra",
       "-Werror",
       "-I",
-      "Zombie.hpp",
+      ".",
       "-o",
       "zombie",
       "main.cpp"
@@ -141,7 +141,7 @@
       "-Wextra",
       "-Werror",
       "-I",
-      "Zombie.hpp",
+      ".",
       "-o",
       "zombie",
       "zombieHorde.cpp"
@@ -224,5 +224,53 @@
     "directory": "/Users/lithium/Projects/Codam_org/CPP/01/ex04",
     "file": "/Users/lithium/Projects/Codam_org/CPP/01/ex04/main.cpp",
     "output": "/Users/lithium/Projects/Codam_org/CPP/01/ex04/build/main.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-c",
+      "-o",
+      "build/main.o",
+      "main.cpp"
+    ],
+    "directory": "/Users/lithium/Projects/Codam_org/CPP/01/ex05",
+    "file": "/Users/lithium/Projects/Codam_org/CPP/01/ex05/main.cpp",
+    "output": "/Users/lithium/Projects/Codam_org/CPP/01/ex05/build/main.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-c",
+      "-o",
+      "build/Harl.o",
+      "Harl.cpp"
+    ],
+    "directory": "/Users/lithium/Projects/Codam_org/CPP/01/ex05",
+    "file": "/Users/lithium/Projects/Codam_org/CPP/01/ex05/Harl.cpp",
+    "output": "/Users/lithium/Projects/Codam_org/CPP/01/ex05/build/Harl.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-c",
+      "-o",
+      "build/main.o",
+      "main.cpp"
+    ],
+    "directory": "/Users/lithium/Projects/Codam_org/CPP/01/ex06",
+    "file": "/Users/lithium/Projects/Codam_org/CPP/01/ex06/main.cpp",
+    "output": "/Users/lithium/Projects/Codam_org/CPP/01/ex06/build/main.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-c",
+      "-o",
+      "build/Harl.o",
+      "Harl.cpp"
+    ],
+    "directory": "/Users/lithium/Projects/Codam_org/CPP/01/ex06",
+    "file": "/Users/lithium/Projects/Codam_org/CPP/01/ex06/Harl.cpp",
+    "output": "/Users/lithium/Projects/Codam_org/CPP/01/ex06/build/Harl.o"
   }
 ]
