@@ -1,7 +1,7 @@
 [
   {
     "arguments": [
-      "/opt/homebrew/opt/llvm/bin/clang++",
+      "/usr/bin/c++",
       "-c",
       "-Wall",
       "-Wextra",
@@ -16,7 +16,7 @@
   },
   {
     "arguments": [
-      "/opt/homebrew/opt/llvm/bin/clang++",
+      "/usr/bin/c++",
       "-c",
       "-Wall",
       "-Wextra",

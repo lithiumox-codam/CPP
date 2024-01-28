@@ -9,8 +9,8 @@ int main(int ac, char **av) {
 	} else {
 		for (int i = 1; i < ac; i++) {
 			std::string str(av[i]);
-			for (char &c : str) {
-				c = std::toupper(static_cast<unsigned char>(c));
+			for (unsigned long j = 0; j < str.length(); j++) {
+				str[j] = std::toupper(str[j]);
 			}
 			std::cout << str + " ";
 		}
