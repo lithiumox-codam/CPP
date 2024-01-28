@@ -1,4 +1,4 @@
-# My CPP monorepo! [![Make CI](https://github.com/lithiumox-codam/CPP/actions/workflows/make.yml/badge.svg)](https://github.com/lithiumox-codam/CPP/actions/workflows/make.yml)
+# My CPP monorepo! [![Ubuntu Make Compile](https://github.com/lithiumox-codam/CPP/actions/workflows/make.yml/badge.svg)](https://github.com/lithiumox-codam/CPP/actions/workflows/make.yml)
 
 This is my CPP monorepo. It does some cool stuff like implement clang tooling and a global makefile to build all the things. It will contain all the CPP projects I need to do in the 42 curriculum.
 
