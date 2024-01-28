@@ -1,9 +1,10 @@
-NAME = phonebook
-SRC = phonebook.cpp
+NAME = zombie
+SRC = Zombie.cpp main.cpp zombieHorde.cpp
+HEADERS = Zombie.hpp
 
 all: $(NAME)
 
-$(NAME):
+$(NAME): $(SRC) $(HEADERS)
 	@c++ -Wall -Wextra -Werror $(SRC) -I . -o $(NAME)
 
 clean:

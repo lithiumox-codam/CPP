@@ -1,5 +1,5 @@
-NAME = phonebook
-SRC = phonebook.cpp
+NAME = zombie
+SRC = newZombie.cpp randomChump.cpp zombie.cpp main.cpp
 
 all: $(NAME)
 

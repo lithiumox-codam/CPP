@@ -1,0 +1,30 @@
+NAME = replace
+SRC = main.cpp
+HEADERS =
+BUILD_DIR = build
+BUILD = $(addprefix $(BUILD_DIR)/, $(SRC:.cpp=.o))
+
+all: $(NAME)
+
+$(NAME): $(BUILD_DIR) $(BUILD)
+	@c++ $(BUILD) -o $(NAME)
+
+$(BUILD_DIR)/%.o: %.cpp | $(BUILD_DIR)
+	@c++ -c $< -o $@
+
+$(BUILD_DIR):
+	@mkdir -p $(BUILD_DIR)
+
+clean:
+	@rm -rf $(NAME)
+	@rm -f replaced.txt
+
+fclean: clean
+	@rm -rf $(BUILD_DIR)
+
+re: fclean all
+
+format:
+	@clang-format -i $(SRC) $(HEADERS)
+
+.PHONY: all clean fclean re

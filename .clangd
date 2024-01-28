@@ -1,6 +1,6 @@
 {
   "CompileFlags": {
-    "Add": ["-Wno-unused-includes", "-Wall", "-Wextra", "-Werror", "-std=c++11", "-pedantic", "-Wno-unused-parameter", "-Wno-unused-variable", "-Wno-unused-but-set-variable", "-Wno-unused-function", "-Wno-unused-value", "-Wno-unused-local-typedefs"]
+    "Add": ["-Wall", "-Wextra", "-Werror", "-std=c++11", "-pedantic", "-Wno-unused-parameter", "-Wno-unused-variable", "-Wno-unused-but-set-variable", "-Wno-unused-function", "-Wno-unused-value", "-Wno-unused-local-typedefs"]
   },
   "Index": {
     "Background": "Build"
