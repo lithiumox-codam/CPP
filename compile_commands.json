@@ -168,6 +168,9 @@
   {
     "arguments": [
       "/usr/bin/c++",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
       "-c",
       "-o",
       "build/main.o",
@@ -180,6 +183,9 @@
   {
     "arguments": [
       "/usr/bin/c++",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
       "-c",
       "-o",
       "build/Weapon.o",
@@ -192,6 +198,9 @@
   {
     "arguments": [
       "/usr/bin/c++",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
       "-c",
       "-o",
       "build/HumanA.o",
@@ -204,6 +213,9 @@
   {
     "arguments": [
       "/usr/bin/c++",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
       "-c",
       "-o",
       "build/HumanB.o",
@@ -216,6 +228,9 @@
   {
     "arguments": [
       "/usr/bin/c++",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
       "-c",
       "-o",
       "build/main.o",
@@ -228,6 +243,9 @@
   {
     "arguments": [
       "/usr/bin/c++",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
       "-c",
       "-o",
       "build/main.o",
@@ -240,6 +258,9 @@
   {
     "arguments": [
       "/usr/bin/c++",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
       "-c",
       "-o",
       "build/Harl.o",
@@ -252,6 +273,9 @@
   {
     "arguments": [
       "/usr/bin/c++",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
       "-c",
       "-o",
       "build/main.o",
@@ -264,6 +288,9 @@
   {
     "arguments": [
       "/usr/bin/c++",
+      "-Werror",
+      "-Wall",
+      "-Wextra",
       "-c",
       "-o",
       "build/Harl.o",
