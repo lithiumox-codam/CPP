@@ -12,7 +12,10 @@ int main(int ac, char **av) {
 			for (unsigned long j = 0; j < str.length(); j++) {
 				str[j] = std::toupper(str[j]);
 			}
-			std::cout << str + " ";
+			if (i == ac - 1)
+				std::cout << str;
+			else
+				std::cout << str + " ";
 		}
 	}
 	std::cout << "\n";
