@@ -1,10 +1,10 @@
 NAME = phonebook
-SRC = phonebook.cpp
+SRC = src/phonebook.cpp src/contact.cpp
 
 all: $(NAME)
 
 $(NAME):
-	@c++ -Wall -Wextra -Werror $(SRC) -I . -o $(NAME)
+	@c++ -Wall -Wextra -Werror $(SRC) -I ./includes -o $(NAME)
 
 clean:
 	@rm -rf $(NAME)

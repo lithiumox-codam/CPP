@@ -1,5 +1,8 @@
 # My CPP monorepo! [![Ubuntu Make Compile](https://github.com/lithiumox-codam/CPP/actions/workflows/make.yml/badge.svg)](https://github.com/lithiumox-codam/CPP/actions/workflows/make.yml)
 
+[![](https://tokei.rs/b1/github/lithiumox-codam/CPP?category=code&type=CPP&label=Lines%20of%20CPP)](https://github.com/lithiumox-codam/CPP)
+[![](https://tokei.rs/b1/github/lithiumox-codam/CPP?category=files&type=Makefile&label=Number%20of%20Makefiles)](https://github.com/lithiumox-codam/CPP)
+
 This is my CPP monorepo. It does some cool stuff like implement clang tooling and a global makefile to build all the things. It will contain all the CPP projects I need to do in the 42 curriculum.
 
 ## How to build

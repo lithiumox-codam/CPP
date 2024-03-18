@@ -22,13 +22,30 @@
       "-Wextra",
       "-Werror",
       "-I",
-      ".",
+      "./includes",
       "-o",
       "phonebook",
-      "phonebook.cpp"
+      "src/phonebook.cpp"
     ],
     "directory": "/Users/lithium/Projects/Codam_org/CPP/00/ex01",
-    "file": "/Users/lithium/Projects/Codam_org/CPP/00/ex01/phonebook.cpp",
+    "file": "/Users/lithium/Projects/Codam_org/CPP/00/ex01/src/phonebook.cpp",
+    "output": "/Users/lithium/Projects/Codam_org/CPP/00/ex01/phonebook"
+  },
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-c",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-I",
+      "./includes",
+      "-o",
+      "phonebook",
+      "src/contact.cpp"
+    ],
+    "directory": "/Users/lithium/Projects/Codam_org/CPP/00/ex01",
+    "file": "/Users/lithium/Projects/Codam_org/CPP/00/ex01/src/contact.cpp",
     "output": "/Users/lithium/Projects/Codam_org/CPP/00/ex01/phonebook"
   },
   {
@@ -76,10 +93,10 @@
       ".",
       "-o",
       "zombie",
-      "zombie.cpp"
+      "Zombie.cpp"
     ],
     "directory": "/Users/lithium/Projects/Codam_org/CPP/01/ex00",
-    "file": "/Users/lithium/Projects/Codam_org/CPP/01/ex00/zombie.cpp",
+    "file": "/Users/lithium/Projects/Codam_org/CPP/01/ex00/Zombie.cpp",
     "output": "/Users/lithium/Projects/Codam_org/CPP/01/ex00/zombie"
   },
   {
@@ -276,6 +293,7 @@
       "-Werror",
       "-Wall",
       "-Wextra",
+      "-Wno-implicit-fallthrough",
       "-c",
       "-o",
       "build/main.o",
@@ -291,6 +309,7 @@
       "-Werror",
       "-Wall",
       "-Wextra",
+      "-Wno-implicit-fallthrough",
       "-c",
       "-o",
       "build/Harl.o",
