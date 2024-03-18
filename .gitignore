@@ -36,3 +36,4 @@
 
 *.md
 !README.md
+compile_commands.json

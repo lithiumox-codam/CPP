@@ -7,6 +7,14 @@ This is my CPP monorepo. It does some cool stuff like implement clang tooling an
 
 ## How to build
 
+First off there are some dependencies you need to install.
+ - ![bear](https://github.com/rizsotto/Bear) (for generating compile_commands.json)
+ - ![clang](https://clang.llvm.org/) (for clang-tidy and clang-format)
+ - ![clang-tidy](https://clang.llvm.org/extra/clang-tidy/) (for static analysis)
+ - ![clang-format](https://clang.llvm.org/docs/ClangFormat.html) (for formatting)
+
+ After you have installed these dependencies, you can build the project by running the following command in the root of the project:
+
 ```bash
 make
 ```
