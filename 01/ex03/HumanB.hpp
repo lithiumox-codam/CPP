@@ -10,8 +10,10 @@ class HumanB {
 	Weapon* weapon;
 
    public:
+	HumanB();
 	explicit HumanB(std::string name);
 	~HumanB();
+	HumanB& operator=(const HumanB& other);
 	void attack();
 	void setWeapon(Weapon& weapon);
 };

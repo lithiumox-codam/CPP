@@ -1,5 +1,4 @@
-#ifndef __FIXED_H__
-#define __FIXED_H__
+#pragma once
 
 #include <ostream>
 
@@ -15,17 +14,6 @@ class Fixed {
 	void setRawBits(int const raw);
 	int toInt(void) const;
 	float toFloat(void) const;
-	friend std::ostream &operator<<(std::ostream &out, const Fixed &value);
-	friend bool operator>(const Fixed &a, const Fixed &b);
-	friend bool operator<(const Fixed &a, const Fixed &b);
-	friend bool operator>=(const Fixed &a, const Fixed &b);
-	friend bool operator<=(const Fixed &a, const Fixed &b);
-	friend bool operator==(const Fixed &a, const Fixed &b);
-	friend bool operator!=(const Fixed &a, const Fixed &b);
-	friend Fixed operator+(const Fixed &a, const Fixed &b);
-	friend Fixed operator-(const Fixed &a, const Fixed &b);
-	friend Fixed operator*(const Fixed &a, const Fixed &b);
-	friend Fixed operator/(const Fixed &a, const Fixed &b);
 	Fixed &operator++();
 	Fixed operator++(int);
 	Fixed &operator--();
@@ -36,4 +24,14 @@ class Fixed {
 	static const int _fractionalBits = 8;
 };
 
-#endif
+std::ostream &operator<<(std::ostream &out, const Fixed &value);
+bool operator>(const Fixed &a, const Fixed &b);
+bool operator<(const Fixed &a, const Fixed &b);
+bool operator>=(const Fixed &a, const Fixed &b);
+bool operator<=(const Fixed &a, const Fixed &b);
+bool operator==(const Fixed &a, const Fixed &b);
+bool operator!=(const Fixed &a, const Fixed &b);
+Fixed operator+(const Fixed &a, const Fixed &b);
+Fixed operator-(const Fixed &a, const Fixed &b);
+Fixed operator*(const Fixed &a, const Fixed &b);
+Fixed operator/(const Fixed &a, const Fixed &b);

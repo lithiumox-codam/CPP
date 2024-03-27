@@ -3,6 +3,9 @@
 #include <iomanip>
 #include <iostream>
 
+/**
+ * @brief Constructor for the Contact class.
+ */
 PhoneBook::PhoneBook() { contact_count = 0; };
 
 /**
@@ -47,6 +50,10 @@ std::string get_input(std::string prompt, bool is_number = false, bool first = t
 	return input;
 }
 
+/**
+ * @brief Adds a contact to the phone book. By default, the contact is added to the first available slot. If there are
+ * no available slots, the oldest contact is removed and the new contact is added to the last slot.
+ */
 void PhoneBook::add_contact() {
 	Contact contact;
 
@@ -115,6 +122,10 @@ void PhoneBook::search_contact() {
 	this->print_contact(index);
 }
 
+/**
+ * @brief Prints a contact to the console.
+ * @param index The index of the contact to print.
+ */
 void PhoneBook::print_contact(int index) {
 	std::cout << " Contact " << index << ":"
 			  << "\n";

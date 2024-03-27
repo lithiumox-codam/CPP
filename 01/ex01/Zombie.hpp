@@ -11,6 +11,7 @@ class Zombie {
    public:
 	Zombie();
 	~Zombie();
+	Zombie& operator=(const Zombie& other);
 	void announce();
 	void setName(std::string name);
 };
