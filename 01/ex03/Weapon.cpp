@@ -6,6 +6,8 @@
  */
 Weapon::Weapon(std::string type) { this->type = type; }
 
+Weapon::Weapon() { this->type = "default"; }
+
 /**
  * @brief Weapon::~Weapon Destructor
  */

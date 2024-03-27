@@ -1,6 +1,6 @@
-NAME = claptrap
-SRC = main.cpp ClapTrap.cpp
-HEADERS = ClapTrap.hpp
+NAME = temp
+SRC = main.cpp
+HEADERS =
 BUILD_DIR = build
 BUILD = $(addprefix $(BUILD_DIR)/, $(SRC:.cpp=.o))
 

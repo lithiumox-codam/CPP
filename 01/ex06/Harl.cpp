@@ -6,8 +6,6 @@ Harl::Harl() {}
 
 Harl::~Harl() {}
 
-Harl& Harl::operator=(const Harl& other) { return *this; }
-
 void Harl::complain(std::string level) {
 	std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 
