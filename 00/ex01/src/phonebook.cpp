@@ -1,5 +1,6 @@
 #include "../includes/phonebook.hpp"
 
+#include <cstdlib>
 #include <iomanip>
 #include <iostream>
 
@@ -25,6 +26,14 @@ bool is_all_num(std::string &str) {
 	return is_num;
 }
 
+bool protect_gl(std::string &str) {
+	if (!std::getline(std::cin, str))
+		std::exit(0);
+	else if (str.empty())
+		return false;
+	return true;
+}
+
 /**
  * @brief Gets the input from the user.
  *
@@ -38,12 +47,12 @@ std::string get_input(std::string prompt, bool is_number = false, bool first = t
 	if (is_number) {
 		do {
 			std::cout << prompt;
-			std::getline(std::cin, input);
+			protect_gl(input);
 		} while (input.empty() || !is_all_num(input));
 	} else
 		do {
 			std::cout << prompt;
-			std::getline(std::cin, input);
+			protect_gl(input);
 		} while (input.empty());
 	input.erase(0, input.find_first_not_of(' '));
 	input.erase(input.find_last_not_of(' ') + 1);
@@ -142,7 +151,7 @@ int main() {
 
 	while (true) {
 		std::cout << "Enter a command: ";
-		std::cin >> command;
+		protect_gl(command);
 		if (command == "ADD") {
 			phonebook.add_contact();
 		} else if (command == "SEARCH") {
