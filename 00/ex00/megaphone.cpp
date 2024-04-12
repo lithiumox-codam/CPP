@@ -15,8 +15,8 @@ int main(int ac, char **av) {
 	} else {
 		for (int i = 1; i < ac; i++) {
 			std::string str(av[i]);
-			for (unsigned long j = 0; j < str.length(); j++) {
-				str[j] = std::toupper(str[j]);
+			for (char &c : str) {
+				c = std::toupper(c);
 			}
 			if (i == ac - 1)
 				std::cout << str;
