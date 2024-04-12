@@ -1,5 +1,5 @@
 NAME = phonebook
-SRC = src/phonebook.cpp src/contact.cpp
+SRC = src/Phonebook.cpp src/Contact.cpp
 
 all: $(NAME)
 
