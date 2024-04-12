@@ -2,8 +2,11 @@
 
 #include "Animal.hpp"
 
-class Cat: public Animal {
-	public:
-	  Cat();
-	  void makesound() override;
-}
+class Cat : public Animal {
+   public:
+	Cat();
+	~Cat() override;
+	Cat(const Cat &other);
+	Cat &operator=(const Cat &other);
+	void makeSound(void) override;
+};
