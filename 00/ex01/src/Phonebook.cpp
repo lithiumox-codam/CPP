@@ -1,6 +1,5 @@
 #include "../includes/Phonebook.hpp"
 
-#include <cstdlib>
 #include <iomanip>
 #include <iostream>
 
@@ -41,9 +40,8 @@ bool protect_gl(std::string &str) {
  * @param is_number Whether or not the input should be a number.
  * @param first Whether or not this is the first time the function is called.
  */
-std::string get_input(std::string prompt, bool is_number = false, bool first = true) {
+std::string get_input(std::string prompt, bool is_number = false) {
 	std::string input;
-	if (first) std::cin.ignore();
 	if (is_number) {
 		do {
 			std::cout << prompt;
@@ -66,11 +64,11 @@ std::string get_input(std::string prompt, bool is_number = false, bool first = t
 void PhoneBook::add_contact() {
 	Contact contact;
 
-	contact.set_first_name(get_input("Enter first name: ", false, true));
-	contact.set_last_name(get_input("Enter last name: ", false, false));
-	contact.set_nickname(get_input("Enter nickname: ", false, false));
-	contact.set_darkest_secret(get_input("Enter darkest secret: ", false, false));
-	contact.set_phone_number(get_input("Enter phone number: ", true, false));
+	contact.set_first_name(get_input("Enter first name: "));
+	contact.set_last_name(get_input("Enter last name: "));
+	contact.set_nickname(get_input("Enter nickname: "));
+	contact.set_darkest_secret(get_input("Enter darkest secret: "));
+	contact.set_phone_number(get_input("Enter phone number: ", true));
 	if (this->contact_count < 8) {
 		this->contacts[this->contact_count] = contact;
 		this->contact_count++;
@@ -99,7 +97,7 @@ void PhoneBook::search_contact() {
 	std::cout << std::setw(width) << "Nickname"
 			  << "\n";
 	for (int i = 0; i < this->contact_count; i++) {
-		std::cout << std::setw(width) << i << "|";
+		std::cout << std::setw(width) << i + 1 << "|";
 		std::string first_name = this->contacts[i].get_first_name();
 		std::string last_name = this->contacts[i].get_last_name();
 		std::string nickname = this->contacts[i].get_nickname();
@@ -116,16 +114,24 @@ void PhoneBook::search_contact() {
 		std::cout << std::setw(width) << last_name << "|";
 		std::cout << std::setw(width) << nickname << "\n";
 	}
+	std::string line;
 	int index = 0;
 	while (true) {
 		std::cout << "Enter an index: ";
-		std::cin >> index;
-		if (index >= 0 && index < this->contact_count) {
-			break;
-		} else {
-			std::cout << "Invalid index."
-					  << "\n";
-			continue;
+		protect_gl(line);
+		try
+		{
+			index = std::stoi(line);
+			index--;
+			if (index >= 0 && index < this->contact_count) {
+				break;
+			} else {
+				std::cout << "Invalid index!\n";
+			}
+		}
+		catch (const std::exception&)
+		{
+			std::cout << "Invalid input. Please enter an integer" << std::endl;
 		}
 	}
 	this->print_contact(index);
@@ -142,25 +148,25 @@ void PhoneBook::print_contact(int index) {
 	std::cout << "  Last name:		" << this->contacts[index].get_last_name() << "\n";
 	std::cout << "  Nickname:		" << this->contacts[index].get_nickname() << "\n";
 	std::cout << "  Darkest secret:	" << this->contacts[index].get_darkest_secret() << "\n";
-	std::cout << "  Phone number: 	" << this->contacts[index].get_phone_number() << "\n";
+	std::cout << "  Phone number: 	" << this->contacts[index].get_phone_number() << std::endl;
 }
 
 int main() {
 	PhoneBook phonebook;
 	std::string command;
 
-	while (true) {
+    while (true) {
 		std::cout << "Enter a command: ";
 		protect_gl(command);
 		if (command == "ADD") {
 			phonebook.add_contact();
 		} else if (command == "SEARCH") {
 			phonebook.search_contact();
+			continue;
 		} else if (command == "EXIT") {
 			break;
 		} else {
-			std::cout << "Invalid command."
-					  << "\n";
+			std::cout << "Invalid command" << std::endl;
 		}
 	}
 	return 0;
