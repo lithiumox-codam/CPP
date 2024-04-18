@@ -1,6 +1,5 @@
 NAME = replace
 SRC = main.cpp
-HEADERS =
 BUILD_DIR = build
 BUILD = $(addprefix $(BUILD_DIR)/, $(SRC:.cpp=.o))
 

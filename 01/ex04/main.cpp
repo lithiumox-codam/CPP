@@ -25,8 +25,13 @@ std::string replace(std::string s, std::string s1, std::string s2) {
 	return ret;
 }
 
+/**
+ * @brief Replace all occurences of s1 in the file av[1] by s2
+ * and write the result in the file "replaced.txt"
+ * @param ac The number of arguments
+ * @param av The arguments
+ */
 int main(int ac, char **av) {
-	const std::string outfile = "replaced.txt";
 	if (ac != 4) {
 		std::cout << "Wrong number of arguments" << std::endl;
 		return 1;
@@ -36,7 +41,9 @@ int main(int ac, char **av) {
 		std::cout << "File does not exist" << std::endl;
 		return 1;
 	}
-	std::ofstream ofs(outfile, std::ios_base::trunc);
+	std::string outfilename(av[1]);
+	outfilename += ".replaced";
+	std::ofstream ofs(outfilename, std::ios_base::trunc);
 	if (!ofs) {
 		std::cout << "Could not open output file" << std::endl;
 		return 1;

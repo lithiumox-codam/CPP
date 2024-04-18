@@ -16,19 +16,19 @@ void Harl::complain(std::string level) {
 
 	switch (i) {
 		case 0:
-			std::cout << "[ DEBUG ]" << std::endl;
+			std::cout << BLUE << "[ DEBUG ]" << std::endl;
 			Harl::debug();
 		case 1:
-			std::cout << "[ INFO ]" << std::endl;
+			std::cout << GREEN << "[ INFO ]" << std::endl;
 			Harl::info();
 		case 2:
-			std::cout << "[ WARNING ]" << std::endl;
+			std::cout << YELLOW << "[ WARNING ]" << std::endl;
 			Harl::warning();
 		case 3:
-			std::cout << "[ ERROR ]" << std::endl;
+			std::cout << RED << "[ ERROR ]" << std::endl;
 			Harl::error();
 	}
-	if (i == 4) std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
+	if (i == 4) std::cout << TEAL << "[ Probably complaining about insignificant problems ]" << RESET << std::endl;
 }
 
 void Harl::debug() {
@@ -37,7 +37,7 @@ void Harl::debug() {
 				 "realm of code mysteries and unexpected surprises. Get ready "
 				 "for the most thrilling rollercoaster of "
 				 "excitement and disappointment you never knew you needed."
-			  << std::endl;
+			  << RESET << std::endl;
 }
 
 void Harl::info() {
@@ -47,7 +47,7 @@ void Harl::info() {
 				 "universe revolves around your need for my enlightening "
 				 "wisdom. Prepare to have your mind blown – or "
 				 "at least mildly stirred."
-			  << std::endl;
+			  << RESET << std::endl;
 }
 
 void Harl::warning() {
@@ -55,7 +55,7 @@ void Harl::warning() {
 				 "kidding, or am I? Buckle up, "
 				 "buttercup! Your journey through the treacherous lands of "
 				 "\"I-totally-saw-that-coming\" is about to begin."
-			  << std::endl;
+			  << RESET << std::endl;
 }
 
 void Harl::error() {
@@ -64,5 +64,5 @@ void Harl::error() {
 				 "it's just trying to find its purpose in this vast sea of "
 				 "algorithms and logic. Remember, even the "
 				 "best of us have our moments of self-doubt and confusion."
-			  << std::endl;
+			  << RESET << std::endl;
 }

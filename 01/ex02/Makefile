@@ -3,7 +3,7 @@ SRC = main.cpp
 
 all: $(NAME)
 
-$(NAME):
+$(NAME): $(SRC)
 	@c++ -Wall -Wextra -Werror $(SRC) -o $(NAME)
 
 clean:

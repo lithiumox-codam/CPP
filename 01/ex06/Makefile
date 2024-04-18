@@ -9,7 +9,7 @@ all: $(NAME)
 $(NAME): $(BUILD_DIR) $(BUILD)
 	@c++ $(BUILD) -o $(NAME)
 
-$(BUILD_DIR)/%.o: %.cpp | $(BUILD_DIR)
+$(BUILD_DIR)/%.o: %.cpp $(HEADERS) | $(BUILD_DIR)
 	@c++ -Werror -Wall -Wextra -Wno-implicit-fallthrough -c $< -o $@
 
 $(BUILD_DIR):

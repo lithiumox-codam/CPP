@@ -1,9 +1,10 @@
 NAME = zombie
 SRC = newZombie.cpp randomChump.cpp Zombie.cpp main.cpp
+HEADERS = Zombie.hpp
 
 all: $(NAME)
 
-$(NAME):
+$(NAME): $(SRC) $(HEADERS)
 	@c++ -Wall -Wextra -Werror $(SRC) -I . -o $(NAME)
 
 clean:
