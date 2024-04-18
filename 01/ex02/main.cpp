@@ -15,10 +15,12 @@ int main() {
 	std::string *ptr = &s;
 	std::string &ref = s;
 
+	/* This will print the adresses */
 	std::cout << &s << "\n";
-	std::cout << &ptr << "\n";
+	std::cout << ptr << "\n";
 	std::cout << &ref << "\n";
 
+	/* Here you'll see that they all print the string */
 	std::cout << s << "\n";
 	std::cout << *ptr << "\n";
 	std::cout << ref << "\n";
