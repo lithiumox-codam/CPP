@@ -119,8 +119,7 @@ void PhoneBook::search_contact() {
 	while (true) {
 		std::cout << "Enter an index: ";
 		protect_gl(line);
-		try
-		{
+		try {
 			index = std::stoi(line);
 			index--;
 			if (index >= 0 && index < this->contact_count) {
@@ -128,9 +127,7 @@ void PhoneBook::search_contact() {
 			} else {
 				std::cout << "Invalid index!\n";
 			}
-		}
-		catch (const std::exception&)
-		{
+		} catch (const std::exception &) {
 			std::cout << "Invalid input. Please enter an integer" << std::endl;
 		}
 	}
@@ -155,7 +152,7 @@ int main() {
 	PhoneBook phonebook;
 	std::string command;
 
-    while (true) {
+	while (true) {
 		std::cout << "Enter a command: ";
 		protect_gl(command);
 		if (command == "ADD") {
