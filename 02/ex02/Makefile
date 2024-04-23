@@ -6,7 +6,7 @@ BUILD = $(addprefix $(BUILD_DIR)/, $(SRC:.cpp=.o))
 
 all: $(NAME)
 
-$(NAME): $(BUILD_DIR) $(BUILD)
+$(NAME): $(BUILD_DIR) $(HEADERS)
 	@c++ $(BUILD) -o $(NAME)
 
 $(BUILD_DIR)/%.o: %.cpp | $(BUILD_DIR)
