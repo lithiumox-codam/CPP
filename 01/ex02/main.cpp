@@ -2,13 +2,9 @@
 #include <string>
 
 /**
- * @brief Main function that demonstrates the use of pointers and references
- * in C++. It creates a string and then creates a pointer and a reference to
- * that string. It then prints the address of the string, the pointer and the
- * reference. It also prints the string, the string pointed to by the pointer
- * and the string referenced by the reference. The address of the string, the
- * pointer and the reference are different, but the string, the string pointed
- * to by the pointer and the string referenced by the reference are the same.
+ * @brief This exercise shows how pointers and references work in C++,
+ * All pointers and references lead to the same address and print out
+ * the exact same strings.
  */
 int main() {
 	std::string s = "HI THIS IS BRAIN";
@@ -16,13 +12,13 @@ int main() {
 	std::string &ref = s;
 
 	/* This will print the adresses */
-	std::cout << &s << "\n";
-	std::cout << ptr << "\n";
-	std::cout << &ref << "\n";
+	std::cout << &s << std::endl;
+	std::cout << ptr << std::endl;
+	std::cout << &ref << std::endl;
 
 	/* Here you'll see that they all print the string */
-	std::cout << s << "\n";
-	std::cout << *ptr << "\n";
-	std::cout << ref << "\n";
+	std::cout << s << std::endl;
+	std::cout << *ptr << std::endl;
+	std::cout << ref << std::endl;
 	return 0;
 }

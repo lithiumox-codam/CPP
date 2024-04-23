@@ -18,4 +18,4 @@ HumanA &HumanA::operator=(const HumanA &other) {
 	return *this;
 }
 
-void HumanA::attack() { std::cout << this->name << " attacks with his " << this->weapon.getType() << "\n"; }
+void HumanA::attack() { std::cout << this->name << " attacks with his " << this->weapon.getType() << std::endl; }

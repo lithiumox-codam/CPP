@@ -4,9 +4,9 @@
 
 #include "Weapon.hpp"
 
-HumanB::HumanB() : name("default") {}
+HumanB::HumanB() : name("default"), weapon(nullptr) {}
 
-HumanB::HumanB(std::string name) : name(name) {}
+HumanB::HumanB(std::string name) : name(name), weapon(nullptr) {}
 
 HumanB::~HumanB() {}
 
@@ -18,10 +18,10 @@ HumanB &HumanB::operator=(const HumanB &other) {
 }
 
 void HumanB::attack() {
-	if (weapon == nullptr)
+	if (this->weapon == nullptr)
 		std::cout << name << " attacks with his bare hands\n";
 	else
-		std::cout << name << " attacks with his " << (*this->weapon).getType() << "\n";
+		std::cout << name << " attacks with his " << (*this->weapon).getType() << std::endl;
 }
 
 void HumanB::setWeapon(Weapon &weapon) { this->weapon = &weapon; }

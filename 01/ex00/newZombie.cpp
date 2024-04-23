@@ -2,7 +2,7 @@
 
 /**
  * @brief Construct a new Zombie:: Zombie object
- * This allocates memory for the zombie object
+ * @warning This allocates memory for the zombie object
  * @param name
  */
 Zombie* newZombie(std::string name) {

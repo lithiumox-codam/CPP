@@ -84,8 +84,7 @@ void PhoneBook::search_contact() {
 	const int width = 10;
 	const int max_w = 9;
 	if (this->contact_count == 0) {
-		std::cout << "Phone book is empty."
-				  << "\n";
+		std::cout << "Phone book is empty." << std::endl;
 		return;
 	}
 	std::cout << std::setw(width) << "Index"
@@ -94,8 +93,7 @@ void PhoneBook::search_contact() {
 			  << "|";
 	std::cout << std::setw(width) << "Last name"
 			  << "|";
-	std::cout << std::setw(width) << "Nickname"
-			  << "\n";
+	std::cout << std::setw(width) << "Nickname" << std::endl;
 	for (int i = 0; i < this->contact_count; i++) {
 		std::cout << std::setw(width) << i + 1 << "|";
 		std::string first_name = this->contacts[i].get_first_name();
@@ -112,7 +110,7 @@ void PhoneBook::search_contact() {
 		}
 		std::cout << std::setw(width) << first_name << "|";
 		std::cout << std::setw(width) << last_name << "|";
-		std::cout << std::setw(width) << nickname << "\n";
+		std::cout << std::setw(width) << nickname << std::endl;
 	}
 	std::string line;
 	int index = 0;
@@ -139,12 +137,11 @@ void PhoneBook::search_contact() {
  * @param index The index of the contact to print.
  */
 void PhoneBook::print_contact(int index) {
-	std::cout << " Contact " << index << ":"
-			  << "\n";
-	std::cout << "  First name:		" << this->contacts[index].get_first_name() << "\n";
-	std::cout << "  Last name:		" << this->contacts[index].get_last_name() << "\n";
-	std::cout << "  Nickname:		" << this->contacts[index].get_nickname() << "\n";
-	std::cout << "  Darkest secret:	" << this->contacts[index].get_darkest_secret() << "\n";
+	std::cout << " Contact " << index << ":" << std::endl;
+	std::cout << "  First name:		" << this->contacts[index].get_first_name() << std::endl;
+	std::cout << "  Last name:		" << this->contacts[index].get_last_name() << std::endl;
+	std::cout << "  Nickname:		" << this->contacts[index].get_nickname() << std::endl;
+	std::cout << "  Darkest secret:	" << this->contacts[index].get_darkest_secret() << std::endl;
 	std::cout << "  Phone number: 	" << this->contacts[index].get_phone_number() << std::endl;
 }
 

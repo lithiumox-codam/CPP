@@ -17,5 +17,12 @@ int main() {
 		club.setType("Laser gun");
 		jim.attack();
 	}
+	{
+		HumanB kenny("Kenny");
+		kenny.attack();
+		Weapon nail = Weapon("Nail");
+		kenny.setWeapon(nail);
+		kenny.attack();
+	}
 	return 0;
 }

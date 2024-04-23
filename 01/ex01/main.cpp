@@ -2,15 +2,15 @@
 
 #include "Zombie.hpp"
 
-int main() {
-	Zombie *horde;
+#define AMOUNT 10
 
-	horde = zombieHorde(10, "Kees");
+int main() {
+	Zombie *horde = zombieHorde(AMOUNT, "Kees");
 	if (horde == NULL) {
 		std::cout << "malloc failed!" << std::endl;
 		return 1;
 	}
-	for (int i = 0; i < 10; i++) horde[i].announce();
+	for (int i = 0; i < AMOUNT; i++) horde[i].announce();
 	delete[] horde;
 	return 0;
 }
