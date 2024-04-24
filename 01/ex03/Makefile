@@ -9,7 +9,7 @@ all: $(NAME)
 $(NAME): $(BUILD_DIR) $(BUILD) $(HEADERS)
 	@c++ $(BUILD) -o $(NAME)
 
-$(BUILD_DIR)/%.o: %.cpp | $(BUILD_DIR)
+$(BUILD_DIR)/%.o: %.cpp $(SRC) $(HEADERS) | $(BUILD_DIR)
 	@c++ -Werror -Wall -Wextra -c $< -o $@
 
 $(BUILD_DIR):
@@ -25,5 +25,9 @@ re: fclean all
 
 format:
 	@clang-format -i $(SRC) $(HEADERS)
+
+run: all
+	@printf "\n🤖 01/ex03 $(NAME) output:\n\n"
+	@./$(NAME)
 
 .PHONY: all clean fclean re

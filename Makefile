@@ -21,4 +21,8 @@ bear: fclean
 format:
 	@$(foreach dir,$(SUBDIRS),$(MAKE) -C $(dir) format;)
 
+run:
+	@printf "🏎️ Running all exercises!\n"
+	@$(foreach dir,$(SUBDIRS),$(MAKE) -C $(dir) run;)
+
 .PHONY: all clean fclean re $(SUBDIRS)

@@ -3,14 +3,14 @@
 #include "Harl.hpp"
 
 int main(int ac, char **av) {
-	if (ac != 2) return 1;
 	Harl harl;
-	harl.complain(av[1]);
 
-	// std::cout << std::endl << "To show all of them work:" << std::endl;
-	// harl.complain("DEBUG");
-	// harl.complain("INFO");
-	// harl.complain("WARNING");
-	// harl.complain("ERROR");
+	if (ac == 2)
+		harl.complain(av[1]);
+	else {
+		std::cerr << "Usage: " << av[0] << " <complaint>" << std::endl;
+		return 1;
+	}
+
 	return 0;
 }

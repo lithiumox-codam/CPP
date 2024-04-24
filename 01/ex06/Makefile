@@ -26,4 +26,12 @@ re: fclean all
 format:
 	@clang-format -i $(SRC) $(HEADERS)
 
+run: all
+	@printf "\n🤖 01/ex06 $(NAME) output:\n\n"
+	./$(NAME) DEBUG
+	./$(NAME) INFO
+	./$(NAME) WARNING
+	./$(NAME) ERROR
+	./$(NAME) RANDOM
+
 .PHONY: all clean fclean re

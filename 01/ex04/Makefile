@@ -2,6 +2,7 @@ NAME = replace
 SRC = main.cpp
 BUILD_DIR = build
 BUILD = $(addprefix $(BUILD_DIR)/, $(SRC:.cpp=.o))
+REPLACED = $(wildcard tests/*.replaced)
 
 all: $(NAME)
 
@@ -16,7 +17,7 @@ $(BUILD_DIR):
 
 clean:
 	@rm -rf $(NAME)
-	@rm -f replaced.txt
+	@rm -f $(REPLACED)
 
 fclean: clean
 	@rm -rf $(BUILD_DIR)
@@ -25,5 +26,9 @@ re: fclean all
 
 format:
 	@clang-format -i $(SRC) $(HEADERS)
+
+run: all
+	@printf "\n🤖 01/ex04 $(NAME) output:\n"
+	@./test.sh
 
 .PHONY: all clean fclean re

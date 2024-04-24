@@ -12,6 +12,9 @@ void Harl::complain(std::string level) {
 
 	for (int i = 0; i < 4; i++)
 		if (level == levels[i]) return (this->*functions[i])();
+
+	std::cout << TEAL << "I don't know what to do with this level of complaint. "
+			  << "I might just quit while im ahead cheerio!" << RESET << std::endl;
 }
 
 void Harl::debug() {
