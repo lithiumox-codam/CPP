@@ -2,7 +2,9 @@
 
 #include "Fixed.hpp"
 
-void print_to_start(std::string name, const Fixed& x) { std::cout << "Initial value of " << name << " is " << x << std::endl; }
+void print_to_start(std::string name, const Fixed& x) {
+	std::cout << "Initial value of " << name << " is " << x << std::endl;
+}
 
 void test_to_int(std::string name, const Fixed& x) {
 	std::cout << name << " is " << x.toInt() << " as integer" << std::endl;
@@ -35,9 +37,7 @@ void test_comparison(std::string name, const Fixed& x, const Fixed& test) {
 }
 
 int main(void) {
-	// make an array of std::string
 	const std::string names[] = {"a", "b", "c", "d"};
-	// make an array of Fixed
 	Fixed values[] = {1234.4321f, 10, 42.42f, 10};
 	Fixed testValues[] = {20, 5, 2.001f, 15.45f};
 
