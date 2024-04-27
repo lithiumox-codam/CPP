@@ -38,3 +38,4 @@
 !README.md
 compile_commands.json
 .DS_Store
+out.log

@@ -21,7 +21,7 @@
     },
     {
         "label": "Run",
-        "command": "make run",
+        "command": "make run > out.log",
         "use_new_terminal": false,
         "reveal": "never"
     }
