@@ -2,60 +2,55 @@
 
 #include "Fixed.hpp"
 
-int main(void) {
-	Fixed a;
-	Fixed const b(10);
-	Fixed const c(42.42f);
-	Fixed const d(b);
-	a = Fixed(1234.4321f);
-	std::cout << "Initial values\n" << std::endl;
-	std::cout << "a is " << a << std::endl;
-	std::cout << "b is " << b << std::endl;
-	std::cout << "c is " << c << std::endl;
-	std::cout << "d is " << d << std::endl;
-	std::cout << "\nChecking toInt function\n" << std::endl;
-	std::cout << "a is " << a.toInt() << " as integer" << std::endl;
-	std::cout << "b is " << b.toInt() << " as integer" << std::endl;
-	std::cout << "c is " << c.toInt() << " as integer" << std::endl;
-	std::cout << "d is " << d.toInt() << " as integer" << std::endl;
+void print_to_start(std::string name, const Fixed& x) { std::cout << "Initial value of " << name << " is " << x << std::endl; }
 
-	std::cout << "\nChecking increment and decrement operators\n" << std::endl;
-	std::cout << "a starts at 10" << std::endl;
-	a = Fixed(10);
-	std::cout << "a is incremented by 1" << std::endl;
-	a = a++;
-	std::cout << "a is " << a << std::endl;
-	std::cout << "a is pre incremented by 1" << std::endl;
-	a = ++a;
-	std::cout << "a is " << a << std::endl;
-	a = a--;
-	std::cout << "a is " << a << std::endl;
-	a = --a;
-	std::cout << "a is " << a << std::endl;
+void test_to_int(std::string name, const Fixed& x) {
+	std::cout << name << " is " << x.toInt() << " as integer" << std::endl;
+}
+
+void test_operators(std::string name, Fixed* x, Fixed* test) {
+	std::cout << "Initial value of " << name << " is " << *x << std::endl;
+	*x = *x / *test;
+	std::cout << name << " / " << *test << " is " << *x << std::endl;
+	*x = *x + *test;
+	std::cout << name << " + " << *test << " is " << *x << std::endl;
+	*x = *x * *test;
+	std::cout << name << " * " << *test << " is " << *x << std::endl;
+	*x = *x - *test;
+	std::cout << name << " - " << *test << " is " << *x << std::endl;
+}
+
+static void print_comp(std::string comp, const Fixed& x, const Fixed& test) {
+	std::cout << x << " " << comp << " " << test << std::endl;
+}
+
+void test_comparison(std::string name, const Fixed& x, const Fixed& test) {
+	std::cout << "Initial value of " << name << " is " << x << std::endl;
+	if (x > test) print_comp(">", x, test);
+	if (x < test) print_comp("<", x, test);
+	if (x >= test) print_comp(">=", x, test);
+	if (x <= test) print_comp("<=", x, test);
+	if (x == test) print_comp("==", x, test);
+	if (x != test) print_comp("!=", x, test);
+}
+
+int main(void) {
+	// make an array of std::string
+	const std::string names[] = {"a", "b", "c", "d"};
+	// make an array of Fixed
+	Fixed values[] = {1234.4321f, 10, 42.42f, 10};
+	Fixed testValues[] = {20, 5, 2.001f, 15.45f};
+
+	for (int i = 0; i < 4; i++) print_to_start(names[i], values[i]);
+
+	std::cout << "\nChecking toInt function\n" << std::endl;
+	for (int i = 0; i < 4; i++) test_to_int(names[i], values[i]);
 
 	std::cout << "\nChecking arithmetic operators\n" << std::endl;
-	a = a / Fixed(2);
-	std::cout << "a is " << a << std::endl;
-	a = a * Fixed(2);
-	std::cout << "a is " << a << std::endl;
-	a = a + Fixed(2);
-	std::cout << "a is " << a << std::endl;
-	a = a - Fixed(2);
-	std::cout << "a is " << a << std::endl;
+	for (int i = 0; i < 4; i++) test_operators(names[i], &values[i], &testValues[i]);
 
 	std::cout << "\nChecking comparison operators\n" << std::endl;
-	if (a > Fixed(2)) std::cout << "a is greater than 2" << std::endl;
-	else { std::cout << "a is less than 2" << std::endl;}
-	if (a < Fixed(2)) std::cout << "a is less than 2" << std::endl;
-	else { std::cout << "a is greater than 2" << std::endl;}
-	if (a >= Fixed(2)) std::cout << "a is greater or equal to 2" << std::endl;
-	else { std::cout << "a is less than 2" << std::endl;}
-	if (a <= Fixed(2)) std::cout << "a is less or equal to 2" << std::endl;
-	else { std::cout << "a is greater than 2" << std::endl;}
-	if (a == Fixed(2)) std::cout << "a is equal to 2" << std::endl;
-	else { std::cout << "a is not equal to 2" << std::endl;}
-	if (a != Fixed(2)) std::cout << "a is not equal to 2" << std::endl;
-	else { std::cout << "a is equal to 2" << std::endl;}
+	for (int i = 0; i < 4; i++) test_comparison(names[i], values[i], testValues[i]);
 
 	return 0;
 }

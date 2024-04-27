@@ -1,0 +1,436 @@
+🏎️ Running all exercises!
+
+🤖 00/ex00 megaphone output:
+
+./megaphone "shhhhh... I think the students are asleep..."
+SHHHHH... I THINK THE STUDENTS ARE ASLEEP...
+./megaphone Damnit " ! " "Sorry students, I thought this thing was off."
+DAMNIT  !  SORRY STUDENTS, I THOUGHT THIS THING WAS OFF.
+./megaphone "This is a test"
+THIS IS A TEST
+./megaphone
+* LOUD AND UNBEARABLE FEEDBACK NOISE *
+
+🤖 00/ex01 phonebook output:
+
+
+[0;32m Cannot run phonebook automatically... [0m
+[0;32m Trust me phonebook is running just fine 🙂 [0m
+
+🤖 01/ex00 zombie output:
+
+Geert BraiiiiiiinnnzzzZ...
+Geert is dead
+Mees BraiiiiiiinnnzzzZ...
+Kees BraiiiiiiinnnzzzZ...
+Mees is dead
+Kees is dead
+
+🤖 01/ex01 zombie output:
+
+Amount of zombies: 10
+
+Kees BraiiiiiiinnnzzzZ...
+Kees BraiiiiiiinnnzzzZ...
+Kees BraiiiiiiinnnzzzZ...
+Kees BraiiiiiiinnnzzzZ...
+Kees BraiiiiiiinnnzzzZ...
+Kees BraiiiiiiinnnzzzZ...
+Kees BraiiiiiiinnnzzzZ...
+Kees BraiiiiiiinnnzzzZ...
+Kees BraiiiiiiinnnzzzZ...
+Kees BraiiiiiiinnnzzzZ...
+Kees is dead
+Kees is dead
+Kees is dead
+Kees is dead
+Kees is dead
+Kees is dead
+Kees is dead
+Kees is dead
+Kees is dead
+Kees is dead
+
+🤖 01/ex02 ptr output:
+
+0x16ef96f80
+0x16ef96f80
+0x16ef96f80
+HI THIS IS BRAIN
+HI THIS IS BRAIN
+HI THIS IS BRAIN
+
+🤖 01/ex03 humans output:
+
+
+{Type: HumanA Starting weapon: Assault Rifle}
+
+Mees attacks with his Assault Rifle
+Mees attacks with his Butter knife
+
+{Type: HumanB Starting weapon: Butter knife}
+
+Jim attacks with his Butter knife
+Jim attacks with his Laser gun
+
+{Type: HumanB Starting weapon: None}
+
+Kenny attacks with his bare hands
+Kenny attacks with his Nail
+
+🤖 01/ex04 replace output:
+--- Replace test code.txt ---
+-In the digital realm of Binaryton, where ones and zeroes danced through the circuits like fireflies in the night, there lived a peculiar scribe named Algorithmicus. Algorithmicus was not your ordinary writer; he wielded the power of code with the finesse of a maestro conducting a symphony.
++In the digital realm of Binaryton, where ones and zeroes danced through the circuits like fireflies in the night, there lived a peculiar scribe named Algorithmicus. Algorithmicus was not your ordinary writer; he wielded the power of  *** node *** with the finesse of a maestro conducting a symphony.
+-Day and night, Algorithmicus toiled away in his tower, surrounded by stacks of parchment covered in arcane symbols and cryptic algorithms. His quill danced across the page, weaving intricate patterns of code that breathed life into the machines that populated Binaryton.
++Day and night, Algorithmicus toiled away in his tower, surrounded by stacks of parchment covered in arcane symbols and cryptic algorithms. His quill danced across the page, weaving intricate patterns of  *** node *** that breathed life into the machines that populated Binaryton.
+-But Algorithmicus was not content with mere mortals marveling at his mastery of code. No, he sought something greater, something legendary. And so, he embarked on a quest to uncover the Codex of Code, a mythical tome said to contain the secrets of the universe written in the language of the machines.
++But Algorithmicus was not content with mere mortals marveling at his mastery of  *** node ***. No, he sought something greater, something legendary. And so, he embarked on a quest to uncover the Codex of Code, a mythical tome said to contain the secrets of the universe written in the language of the machines.
+-With trembling hands, Algorithmicus opened the Codex and beheld its contents. Line after line of code stretched before him, a labyrinth of ones and zeroes that seemed to twist and turn like a serpent in the digital ether. And within its pages lay the answers to the universe's deepest mysteries, encoded in the language of the machines.
++With trembling hands, Algorithmicus opened the Codex and beheld its contents. Line after line of  *** node *** stretched before him, a labyrinth of ones and zeroes that seemed to twist and turn like a serpent in the digital ether. And within its pages lay the answers to the universe's deepest mysteries, en *** node ***d in the language of the machines.
+-But as Algorithmicus delved deeper into the Codex, he realized that the true meaning of its code eluded him. For what is the universe but a series of algorithms, a complex web of cause and effect? And in the end, perhaps the greatest code of all was the one written by the hand of fate itself.
++But as Algorithmicus delved deeper into the Codex, he realized that the true meaning of its  *** node *** eluded him. For what is the universe but a series of algorithms, a complex web of cause and effect? And in the end, perhaps the greatest  *** node *** of all was the one written by the hand of fate itself.
+-And so, with a wistful sigh, Algorithmicus closed the Codex and returned to his tower, his quest for knowledge forever unresolved. For in the end, the true magic of code lay not in its complexity, but in the endless possibilities it held for those who dared to dream.
++And so, with a wistful sigh, Algorithmicus closed the Codex and returned to his tower, his quest for knowledge forever unresolved. For in the end, the true magic of  *** node *** lay not in its complexity, but in the endless possibilities it held for those who dared to dream.
+--- Replace test cheese.txt ---
+-In a quaint village nestled between rolling hills, there lived a cheese aficionado named Winston. Winston was renowned throughout the land for his insatiable love of cheese. He would spend hours in his cellar, surrounded by wheels of cheddar, gouda, and brie, each more tantalizing than the last.
++In a quaint village nestled between rolling hills, there lived a *** nuts *** aficionado named Winston. Winston was renowned throughout the land for his insatiable love of *** nuts ***. He would spend hours in his cellar, surrounded by wheels of cheddar, gouda, and brie, each more tantalizing than the last.
+-One sunny morning, as Winston strolled through the marketplace, he stumbled upon a peculiar sight. The town's prized cheese wheel, a colossal masterpiece of dairy delight, had vanished without a trace. Panic spread like wildfire through the village as whispers of foul play echoed through the cobblestone streets.
++One sunny morning, as Winston strolled through the marketplace, he stumbled upon a peculiar sight. The town's prized *** nuts *** wheel, a colossal masterpiece of dairy delight, had vanished without a trace. Panic spread like wildfire through the village as whispers of foul play echoed through the cobblestone streets.
+-Determined to unravel the mystery, Winston embarked on a quest to recover the stolen cheese. With his trusty sidekick, a plucky mouse named Maurice, by his side, Winston delved into the shadowy underbelly of the cheese black market.
++Determined to unravel the mystery, Winston embarked on a quest to recover the stolen *** nuts ***. With his trusty sidekick, a plucky mouse named Maurice, by his side, Winston delved into the shadowy underbelly of the *** nuts *** black market.
+-Their journey led them to a clandestine cheese club hidden beneath the town square. Here, amidst the flickering candlelight, they encountered a motley crew of cheese enthusiasts, each more eccentric than the last. From the stinky blue cheese connoisseur to the aged parmesan purist, they were a sight to behold.
++Their journey led them to a clandestine *** nuts *** club hidden beneath the town square. Here, amidst the flickering candlelight, they encountered a motley crew of *** nuts *** enthusiasts, each more eccentric than the last. From the stinky blue *** nuts *** connoisseur to the aged parmesan purist, they were a sight to behold.
+-But amidst the revelry, Winston sensed something amiss. With a keen eye and a nose for mischief, he uncovered the truth behind the stolen cheese. It was none other than the town mayor, a conniving charlatan with a penchant for fromage.
++But amidst the revelry, Winston sensed something amiss. With a keen eye and a nose for mischief, he uncovered the truth behind the stolen *** nuts ***. It was none other than the town mayor, a conniving charlatan with a penchant for fromage.
+-In a daring showdown that would go down in history as the Great Cheese Caper, Winston and Maurice confronted the mayor atop the town hall. With wit and cunning, they outsmarted the villain and reclaimed the stolen cheese, restoring peace and prosperity to the village once more.
++In a daring showdown that would go down in history as the Great Cheese Caper, Winston and Maurice confronted the mayor atop the town hall. With wit and cunning, they outsmarted the villain and reclaimed the stolen *** nuts ***, restoring peace and prosperity to the village once more.
+-And so, with the scent of victory lingering in the air, Winston and Maurice returned home, their hearts full of triumph and their bellies full of cheese. For in the end, true friendship and a love of cheese would always prevail.
++And so, with the scent of victory lingering in the air, Winston and Maurice returned home, their hearts full of triumph and their bellies full of *** nuts ***. For in the end, true friendship and a love of *** nuts *** would always prevail.
+--- Replace test swearing.txt ---
+-Once upon a time in a small town, there lived a quirky old lady named Edna. Edna was known for her unique way of expressing herself, and she had a favorite word that she used liberally: "****." Yes, you heard it right, "****." It was her go-to word for everything.
++Once upon a time in a small town, there lived a quirky old lady named Edna. Edna was known for her unique way of expressing herself, and she had a favorite word that she used liberally: "*** duck ***." Yes, you heard it right, "*** duck ***." It was her go-to word for everything.
+-"Oh, these scarves are absolutely ****ing fantastic!" she exclaimed with glee, wrapping one around her neck. The market vendor grinned, delighted by Edna's enthusiasm.
++"Oh, these scarves are absolutely *** duck ***ing fantastic!" she exclaimed with glee, wrapping one around her neck. The market vendor grinned, delighted by Edna's enthusiasm.
+-As she continued her journey through the market, Edna spotted a charming little bakery. The sweet aroma of freshly baked goods wafted through the air, making her stomach grumble with anticipation. Edna couldn't resist the temptation and decided to treat herself to a ****ing delicious pastry.
++As she continued her journey through the market, Edna spotted a charming little bakery. The sweet aroma of freshly baked goods wafted through the air, making her stomach grumble with anticipation. Edna couldn't resist the temptation and decided to treat herself to a *** duck ***ing delicious pastry.
+-"This pastry is so ****ing good! You've outdone yourself, young man!" she praised the baker, who chuckled at Edna's colorful choice of words.
++"This pastry is so *** duck ***ing good! You've outdone yourself, young man!" she praised the baker, who chuckled at Edna's colorful choice of words.
+-"****ing amazing job, kiddos! Keep having a blast!" she cheered, making the children giggle.
++"*** duck ***ing amazing job, kiddos! Keep having a blast!" she cheered, making the children giggle.
+-As the sun began to set, Edna made her way back home, feeling content and grateful for the wonderful day she had experienced. Little did she know, the town had adopted her unique phrase, and soon everyone in town was using "****" to express their excitement and positivity.
++As the sun began to set, Edna made her way back home, feeling content and grateful for the wonderful day she had experienced. Little did she know, the town had adopted her unique phrase, and soon everyone in town was using "*** duck ***" to express their excitement and positivity.
+-And so, in this quaint little town, the word "****" became a symbol of joy and happiness, all thanks to the charming old lady named Edna and her contagious enthusiasm for the little things in life.
++And so, in this quaint little town, the word "*** duck ***" became a symbol of joy and happiness, all thanks to the charming old lady named Edna and her contagious enthusiasm for the little things in life.
+
+🤖 01/ex05 Harl output:
+
+./Harl DEBUG
+[34mOh, you've summoned me to debug, have you? Brace yourself for a wild ride through the mystical realm of code mysteries and unexpected surprises. Get ready for the most thrilling rollercoaster of excitement and disappointment you never knew you needed.[0m
+./Harl INFO
+[32mAh, seeking enlightenment from yours truly, I see. Here's some info for you because clearly, the universe revolves around your need for my enlightening wisdom. Prepare to have your mind blown – or at least mildly stirred.[0m
+./Harl WARNING
+[33mAn impending disaster is looming on the horizon. Just kidding, or am I? Buckle up, buttercup! Your journey through the treacherous lands of "I-totally-saw-that-coming" is about to begin.[0m
+./Harl ERROR
+[31mOh no, an error! Your code seems to be having a little existential crisis. Don't panic; it's just trying to find its purpose in this vast sea of algorithms and logic. Remember, even the best of us have our moments of self-doubt and confusion.[0m
+./Harl NONSENSE
+[36mI don't know what to do with this level of complaint. I might just quit while im ahead cheerio![0m
+
+🤖 01/ex06 harlFilter output:
+
+./harlFilter DEBUG
+[34m[ DEBUG ]
+Oh, you've summoned me to debug, have you? Brace yourself for a wild ride through the mystical realm of code mysteries and unexpected surprises. Get ready for the most thrilling rollercoaster of excitement and disappointment you never knew you needed.[0m
+[32m[ INFO ]
+Ah, seeking enlightenment from yours truly, I see. Here's some info for you because clearly, the universe revolves around your need for my enlightening wisdom. Prepare to have your mind blown – or at least mildly stirred.[0m
+[33m[ WARNING ]
+An impending disaster is looming on the horizon. Just kidding, or am I? Buckle up, buttercup! Your journey through the treacherous lands of "I-totally-saw-that-coming" is about to begin.[0m
+[31m[ ERROR ]
+Oh no, an error! Your code seems to be having a little existential crisis. Don't panic; it's just trying to find its purpose in this vast sea of algorithms and logic. Remember, even the best of us have our moments of self-doubt and confusion.[0m
+./harlFilter INFO
+[32m[ INFO ]
+Ah, seeking enlightenment from yours truly, I see. Here's some info for you because clearly, the universe revolves around your need for my enlightening wisdom. Prepare to have your mind blown – or at least mildly stirred.[0m
+[33m[ WARNING ]
+An impending disaster is looming on the horizon. Just kidding, or am I? Buckle up, buttercup! Your journey through the treacherous lands of "I-totally-saw-that-coming" is about to begin.[0m
+[31m[ ERROR ]
+Oh no, an error! Your code seems to be having a little existential crisis. Don't panic; it's just trying to find its purpose in this vast sea of algorithms and logic. Remember, even the best of us have our moments of self-doubt and confusion.[0m
+./harlFilter WARNING
+[33m[ WARNING ]
+An impending disaster is looming on the horizon. Just kidding, or am I? Buckle up, buttercup! Your journey through the treacherous lands of "I-totally-saw-that-coming" is about to begin.[0m
+[31m[ ERROR ]
+Oh no, an error! Your code seems to be having a little existential crisis. Don't panic; it's just trying to find its purpose in this vast sea of algorithms and logic. Remember, even the best of us have our moments of self-doubt and confusion.[0m
+./harlFilter ERROR
+[31m[ ERROR ]
+Oh no, an error! Your code seems to be having a little existential crisis. Don't panic; it's just trying to find its purpose in this vast sea of algorithms and logic. Remember, even the best of us have our moments of self-doubt and confusion.[0m
+./harlFilter RANDOM
+[36m[ Probably complaining about insignificant problems ][0m
+
+🤖 02/ex00 fixed output:
+
+[34mDefault constructor called[0m
+[34mCopy constructor called
+[33mAssignation operator called[0m
+[36mgetRawBits member function called[0m
+[34mDefault constructor called[0m
+[33mAssignation operator called[0m
+[36mgetRawBits member function called[0m
+[36mgetRawBits member function called[0m
+0
+[36mgetRawBits member function called[0m
+0
+[36mgetRawBits member function called[0m
+0
+[31mDestructor called[0m
+[31mDestructor called[0m
+[31mDestructor called[0m
+
+🤖 02/ex01 fixed output:
+
+[34mDefault constructor called[0m
+[34mInt constructor called[0m
+[34mFloat constructor called[0m
+[34mCopy constructor called[0m
+[33mAssignation operator called[0m
+[36mgetRawBits member function called[0m
+[34mFloat constructor called[0m
+[33mAssignation operator called[0m
+[36mgetRawBits member function called[0m
+[31mDestructor called[0m
+
+Values start off at:
+
+a is 1234.43
+b is 10
+c is 42.4219
+d is 10
+
+Values after conversion:
+
+a is 1234 as integer
+b is 10 as integer
+c is 42 as integer
+d is 10 as integer
+[31mDestructor called[0m
+[31mDestructor called[0m
+[31mDestructor called[0m
+[31mDestructor called[0m
+
+🤖 02/ex02 fixed output:
+
+Initial value of a is 1234.43
+Initial value of b is 10
+Initial value of c is 42.4219
+Initial value of d is 10
+
+Checking toInt function
+
+a is 1234 as integer
+b is 10 as integer
+c is 42 as integer
+d is 10 as integer
+
+Checking arithmetic operators
+
+Initial value of a is 1234.43
+[31mDestructor called[0m
+a / 20 is 61.7227
+[31mDestructor called[0m
+a + 20 is 81.7227
+[31mDestructor called[0m
+a * 20 is 1634.45
+[31mDestructor called[0m
+a - 20 is 1614.45
+Initial value of b is 10
+[31mDestructor called[0m
+b / 5 is 2
+[31mDestructor called[0m
+b + 5 is 7
+[31mDestructor called[0m
+b * 5 is 35
+[31mDestructor called[0m
+b - 5 is 30
+Initial value of c is 42.4219
+[31mDestructor called[0m
+c / 2 is 21.2109
+[31mDestructor called[0m
+c + 2 is 23.2109
+[31mDestructor called[0m
+c * 2 is 46.4219
+[31mDestructor called[0m
+c - 2 is 44.4219
+Initial value of d is 10
+[31mDestructor called[0m
+d / 15.4492 is 0.648438
+[31mDestructor called[0m
+d + 15.4492 is 16.0977
+[31mDestructor called[0m
+d * 15.4492 is 248.695
+[31mDestructor called[0m
+d - 15.4492 is 233.246
+
+Checking comparison operators
+
+Initial value of a is 1614.45
+1614.45 > 20
+1614.45 >= 20
+1614.45 != 20
+Initial value of b is 30
+30 > 5
+30 >= 5
+30 != 5
+Initial value of c is 44.4219
+44.4219 > 2
+44.4219 >= 2
+44.4219 != 2
+Initial value of d is 233.246
+233.246 > 15.4492
+233.246 >= 15.4492
+233.246 != 15.4492
+[31mDestructor called[0m
+[31mDestructor called[0m
+[31mDestructor called[0m
+[31mDestructor called[0m
+[31mDestructor called[0m
+[31mDestructor called[0m
+[31mDestructor called[0m
+[31mDestructor called[0m
+
+🤖 03/ex00 claptrap output:
+
+ClapTrap constructor called
+Geert attacks a tree causing 0 points of damage!
+Geert took 10 damage
+Geert died
+Geert was repaired for 500 hit points
+Geert attacks a tree causing 0 points of damage!
+Geert took 10 damage
+Geert was repaired for 500 hit points
+Geert attacks a tree causing 0 points of damage!
+Geert took 10 damage
+Geert was repaired for 500 hit points
+Geert attacks a tree causing 0 points of damage!
+Geert took 10 damage
+Geert was repaired for 500 hit points
+Geert attacks a tree causing 0 points of damage!
+Geert took 10 damage
+Geert was repaired for 500 hit points
+ClapTrap destructor called
+
+🤖 03/ex01 claptrap output:
+
+ClapTrap constructor called
+ClapTrap constructor called
+ScavTrap constructor called
+ClapTrapGeert attacks a tree causing 0 points of damage!
+Geert took 10 damage
+Geert died
+Geert was repaired for 500 hit points
+ClapTrapGeert attacks a tree causing 0 points of damage!
+Geert took 10 damage
+Geert was repaired for 500 hit points
+ClapTrapGeert attacks a tree causing 0 points of damage!
+Geert took 10 damage
+Geert was repaired for 500 hit points
+ClapTrapGeert attacks a tree causing 0 points of damage!
+Geert took 10 damage
+Geert was repaired for 500 hit points
+ClapTrapGeert attacks a tree causing 0 points of damage!
+Geert took 10 damage
+Geert was repaired for 500 hit points
+ScavTrap Mees attack a tree, causing 20 points of damage!
+Mees took 10 damage
+Mees was repaired for 500 hit points
+ScavTrap Mees attack a tree, causing 20 points of damage!
+Mees took 10 damage
+Mees was repaired for 500 hit points
+ScavTrap Mees attack a tree, causing 20 points of damage!
+Mees took 10 damage
+Mees was repaired for 500 hit points
+ScavTrap Mees attack a tree, causing 20 points of damage!
+Mees took 10 damage
+Mees was repaired for 500 hit points
+ScavTrap Mees attack a tree, causing 20 points of damage!
+Mees took 10 damage
+Mees was repaired for 500 hit points
+ScavTrap destructor called
+ClapTrap destructor called
+ClapTrap destructor called
+
+🤖 04/ex00 polymorphism output:
+
+Animal constructor called
+Animal constructor called
+Cat constructor called
+Animal constructor called
+Dog constructor called
+WrongAnimal constructor called
+WrongCat default constructor called
+Animal
+Cat
+Dog
+WrongCat
+*Generic animal sound*
+Meow Meow
+Woof Woof
+WrongAnimal sound
+Animal destructor called
+Cat destructor called
+Animal destructor called
+Dog destructor called
+Animal destructor called
+WrongCat destructor called
+WrongAnimal destructor called
+
+🤖 04/ex01 polymorphism output:
+
+Animal constructor called
+Animal constructor called
+Brain constructor called
+Cat constructor called
+Animal constructor called
+Dog constructor called
+Brain constructor called
+WrongAnimal constructor called
+WrongCat default constructor called
+Animal
+Cat
+Dog
+WrongCat
+*Generic animal sound*
+Meow Meow
+Woof Woof
+WrongAnimal sound
+Animal destructor called
+Cat destructor called
+Brain destructor called
+Animal destructor called
+Dog destructor called
+Brain destructor called
+Animal destructor called
+WrongCat destructor called
+WrongAnimal destructor called
+
+🤖 04/ex02 polymorphism output:
+
+Animal constructor called
+Brain constructor called
+Cat constructor called
+Animal constructor called
+Dog constructor called
+Brain constructor called
+WrongAnimal constructor called
+WrongCat default constructor called
+Cat
+Dog
+WrongCat
+Meow Meow
+Woof Woof
+WrongAnimal sound
+Cat destructor called
+Brain destructor called
+Animal destructor called
+Dog destructor called
+Brain destructor called
+Animal destructor called
+WrongCat destructor called
+WrongAnimal destructor called
