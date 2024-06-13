@@ -22,11 +22,11 @@ void test_operators(std::string name, Fixed* x, Fixed* test) {
 	std::cout << name << " - " << *test << " is " << *x << std::endl;
 }
 
-static void print_comp(std::string comp, const Fixed& x, const Fixed& test) {
+static void print_comp(std::string comp, Fixed& x, Fixed& test) {
 	std::cout << x << " " << comp << " " << test << std::endl;
 }
 
-void test_comparison(std::string name, const Fixed& x, const Fixed& test) {
+void test_comparison(std::string name, Fixed& x, Fixed& test) {
 	std::cout << "Initial value of " << name << " is " << x << std::endl;
 	if (x > test) print_comp(">", x, test);
 	if (x < test) print_comp("<", x, test);
@@ -54,3 +54,16 @@ int main(void) {
 
 	return 0;
 }
+
+// int main(void) {
+// 	Fixed a;
+// 	Fixed const b(Fixed(5.05f) * Fixed(2));
+// 	std::cout << a << std::endl;
+// 	std::cout << ++a << std::endl;
+// 	std::cout << a << std::endl;
+// 	std::cout << a++ << std::endl;
+// 	std::cout << a << std::endl;
+// 	std::cout << b << std::endl;
+// 	std::cout << Fixed::max(a, b) << std::endl;
+// 	return 0;
+// }

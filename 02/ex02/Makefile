@@ -1,5 +1,5 @@
 NAME = fixed
-SRC = main.cpp Fixed.cpp Fixed_ops.cpp
+SRC = main.cpp Fixed.cpp
 HEADERS = Fixed.hpp
 BUILD_DIR = build
 BUILD = $(addprefix $(BUILD_DIR)/, $(SRC:.cpp=.o))
