@@ -42,7 +42,7 @@ void test_min_max(std::string name, Fixed& x, Fixed& test) {
 	std::cout << "Max of " << x << " and " << test << " is " << Fixed::max(x, test) << std::endl;
 }
 
-void test_pre_post(std::string name, Fixed &x) {
+void test_pre_post(std::string name, Fixed& x) {
 	std::cout << "Initial value of " << name << " is " << x << std::endl;
 	std::cout << "Pre-increment of " << name << " is " << ++x << std::endl;
 	std::cout << "Post-increment of " << name << " is " << x++ << std::endl;
