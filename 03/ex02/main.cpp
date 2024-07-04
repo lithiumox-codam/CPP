@@ -7,17 +7,17 @@ int main(void) {
 	ScavTrap y("Mees");
 	FragTrap z("Jelle");
 
-	for (int i = 0; i < 50; i++) {
+	while (!x.isDead()) {
 		x.attack("a tree");
-		x.takeDamage(10);
-		x.beRepaired(1);
+		x.takeDamage(5);
+		x.beRepaired(10);
 	}
-	for (int i = 0; i < 50; i++) {
+	while (!y.isDead()) {
 		y.attack("a tree");
 		y.takeDamage(10);
 		y.beRepaired(1);
 	}
-	for (int i = 0; i < 50; i++) {
+	while (!z.isDead()) {
 		z.attack("a tree");
 		z.takeDamage(10);
 		z.beRepaired(1);
