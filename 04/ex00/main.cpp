@@ -9,7 +9,7 @@ int main(void) {
 	Animal *base = new Animal();
 	Animal *a = new Cat();
 	Animal *b = new Dog();
-	WrongAnimal *fakeCat = new WrongCat();
+	WrongAnimal *fakeCat = new WrongCat(); // If you replace WrongAnimal with Animal, the code will not compile
 
 	std::cout << base->getType() << std::endl;
 	std::cout << a->getType() << std::endl;

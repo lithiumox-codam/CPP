@@ -1,30 +1,27 @@
-#include <iostream>
-
 #include "Animal.hpp"
 #include "Cat.hpp"
 #include "Dog.hpp"
-#include "WrongCat.hpp"
+
+#define ANIMAL_COUNT 100
 
 int main(void) {
-	Animal *base = new Animal();
-	Animal *a = new Cat();
-	Animal *b = new Dog();
-	WrongAnimal *fakeCat = new WrongCat();
+	Animal* pets[100];
 
-	std::cout << base->getType() << std::endl;
-	std::cout << a->getType() << std::endl;
-	std::cout << b->getType() << std::endl;
-	std::cout << fakeCat->getType() << std::endl;
+	for (int i = 0; i < ANIMAL_COUNT; i++) {
+		if (i % 2 == 0) {
+			pets[i] = new Dog();
+		} else {
+			pets[i] = new Cat();
+		}
+	}
 
-	base->makeSound();
-	a->makeSound();
-	b->makeSound();
-	fakeCat->makeSound();
+	for (int i = 0; i < ANIMAL_COUNT; i++) {
+		pets[i]->makeSound();
+	}
 
-	delete base;
-	delete a;
-	delete b;
-	delete fakeCat;
+	for (int i = 0; i < ANIMAL_COUNT; i++) {
+		delete pets[i];
+	}
 
 	return 0;
 }
