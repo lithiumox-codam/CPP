@@ -39,3 +39,5 @@
 compile_commands.json
 .DS_Store
 out.log
+log
+build

@@ -23,7 +23,7 @@ void identify(Base* p) {
 		std::cout << "Null pointer" << std::endl;
 		return;
 	}
-	
+
 	try {
 		if (dynamic_cast<A*>(p)) {
 			std::cout << "A" << std::endl;
