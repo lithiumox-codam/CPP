@@ -1,6 +1,6 @@
 NAME = bureaucrat
-SRC = Bureaucrat.cpp  main.cpp AForm.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp
-HEADERS = Bureaucrat.hpp AForm.hpp PresidentialPardonForm.hpp RobotomyRequestForm.hpp ShrubberyCreationForm.hpp
+SRC = Bureaucrat.cpp  main.cpp AForm.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp Intern.cpp
+HEADERS = Bureaucrat.hpp AForm.hpp PresidentialPardonForm.hpp RobotomyRequestForm.hpp ShrubberyCreationForm.hpp Intern.hpp
 BUILD_DIR = build
 BUILD = $(addprefix $(BUILD_DIR)/, $(SRC:.cpp=.o))
 
@@ -28,7 +28,7 @@ format:
 	@clang-format -i $(SRC) $(HEADERS)
 
 run: all
-	@printf "\n🤖 05/ex00 $(NAME) output:\n\n"
+	@printf "\n🤖 05/ex03 $(NAME) output:\n\n"
 	@./$(NAME)
 
 .PHONY: all clean fclean re
