@@ -1,6 +1,7 @@
 #include <iomanip>
 #include <iostream>
 #include <sstream>
+#include <string>
 
 #include "Base.hpp"
 
@@ -38,15 +39,32 @@ int main() {
 		std::string ptr_str = ptr_output.str();
 		std::string ref_str = ref_output.str();
 
-		// Remove newlines and trim whitespace
-		ptr_str.erase(std::remove(ptr_str.begin(), ptr_str.end(), '\n'), ptr_str.end());
-		ref_str.erase(std::remove(ref_str.begin(), ref_str.end(), '\n'), ref_str.end());
+		// Remove newlines and trim whitespace (without std::algorithm)
+		size_t start = 0;
+		while (start < ptr_str.length() &&
+			   (ptr_str[start] == ' ' || ptr_str[start] == '\t' || ptr_str[start] == '\n')) {
+			start++;
+		}
+		ptr_str.erase(0, start);
 
-		// Trim leading/trailing whitespace
-		ptr_str.erase(0, ptr_str.find_first_not_of(" \t"));
-		ptr_str.erase(ptr_str.find_last_not_of(" \t") + 1);
-		ref_str.erase(0, ref_str.find_first_not_of(" \t"));
-		ref_str.erase(ref_str.find_last_not_of(" \t") + 1);
+		size_t end = ptr_str.length();
+		while (end > 0 && (ptr_str[end - 1] == ' ' || ptr_str[end - 1] == '\t' || ptr_str[end - 1] == '\n')) {
+			end--;
+		}
+		ptr_str.erase(end, ptr_str.length() - end);
+
+		start = 0;
+		while (start < ref_str.length() &&
+			   (ref_str[start] == ' ' || ref_str[start] == '\t' || ref_str[start] == '\n')) {
+			start++;
+		}
+		ref_str.erase(0, start);
+
+		end = ref_str.length();
+		while (end > 0 && (ref_str[end - 1] == ' ' || ref_str[end - 1] == '\t' || ref_str[end - 1] == '\n')) {
+			end--;
+		}
+		ref_str.erase(end, ref_str.length() - end);
 
 		// Print the table row
 		std::cout << "| " << std::setw(5) << std::right << i << " | " << std::setw(14) << std::left << ptr_str << " | "
