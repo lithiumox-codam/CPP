@@ -1,4 +1,4 @@
-NAME = scalar
+NAME = convert
 SRC = ScalarConverter.cpp  main.cpp
 HEADERS = ScalarConverter.hpp
 BUILD_DIR = build
@@ -28,6 +28,14 @@ format:
 
 run: all
 	@printf "\n🤖 06/ex00 $(NAME) output:\n\n"
-	@./$(NAME)
+	./$(NAME) 0
+	./$(NAME) nan
+	./$(NAME) 42.0f
+	./$(NAME) 42
+	./$(NAME) 42.42
+	./$(NAME) 36
+	./$(NAME) -inf
+	./$(NAME) +inf
+
 
 .PHONY: all clean fclean re

@@ -5,9 +5,8 @@
 #include <iostream>
 
 Base* generate(void) {
-	std::srand(
-		std::time(0) +
-		reinterpret_cast<long>(new int));  // Seed with time + a new address for better randomness in quick successions
+	std::srand(std::time(0) +
+			   std::rand() % 1000);	 // Seed the random number generator with a combination of time and a random number
 	int choice = std::rand() % 3;
 	if (choice == 0) {
 		return new A();

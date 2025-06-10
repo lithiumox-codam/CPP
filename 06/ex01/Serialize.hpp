@@ -10,11 +10,13 @@ struct Data {
 };
 
 class Serialize {
+   private:
+	Serialize() = delete;
+	Serialize(const Serialize&) = delete;
+	Serialize& operator=(const Serialize&) = delete;
+	~Serialize() = delete;
+
    public:
-	Serialize();
-	Serialize(const Serialize&);
-	Serialize& operator=(const Serialize&);
-	~Serialize();
-	uintptr_t serialize(Data* ptr);
-	Data* deserialize(uintptr_t raw);
+	static uintptr_t serialize(Data* ptr);
+	static Data* deserialize(uintptr_t raw);
 };

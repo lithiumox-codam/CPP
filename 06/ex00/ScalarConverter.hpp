@@ -1,35 +1,26 @@
-#include <string>
-
 #pragma once
+
+#include <string>
 
 class ScalarConverter {
    public:
-	// Holds every possible converted value
-	struct Result {
-		char c;
-		int i;
-		float f;
-		double d;
-		bool hasChar = false;
-		bool hasInt = false;
-		bool hasFloat = false;
-		bool hasDouble = false;
-		bool isNaN = false;
-		bool isInf = false;
-	};
+	enum class Type { CHAR, INT, FLOAT, DOUBLE, INVALID };
 
-	// constructors and destructors
-	ScalarConverter();
-	ScalarConverter(const ScalarConverter&);
-	ScalarConverter& operator=(const ScalarConverter&);
-	~ScalarConverter();
-
-	// Entry point: parses, converts & prints
 	static void convert(const std::string& literal);
 
    private:
-	// Steps: parse → convert → print
-	static Result parseLiteral(const std::string& literal);
-	static Result convertAll(const std::string& literal);
-	static void printResult(const Result& r);
+	// class must not be instantiated or copied so delete it is
+	ScalarConverter() = delete;
+	ScalarConverter(const ScalarConverter&) = delete;
+	ScalarConverter& operator=(const ScalarConverter&) = delete;
+	~ScalarConverter() = delete;
+	// Steps: detect → convert → print
+	static Type detectType(const std::string& literal);
+	static void convertAndDisplay(const std::string& literal, Type type);
+	static void displayChar(double value, bool impossible);
+	static void displayInt(double value, bool impossible);
+	static void displayFloat(double value);
+	static void displayDouble(double value);
+	static bool isSpecialFloat(const std::string& literal);
+	static bool isSpecialDouble(const std::string& literal);
 };

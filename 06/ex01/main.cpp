@@ -9,22 +9,19 @@
  * object.
  */
 int main(void) {
-	Data data;
-	data.str = "Hello, World!";
-	data.num = 42;
-
-	Serialize serializer;
+	Data data = {"Hello, World!", 42};
 
 	// Serialize the data
-	uintptr_t raw = serializer.serialize(&data);
+	uintptr_t raw = Serialize::serialize(&data);
 	std::cout << "Serialized data to raw pointer: " << raw << std::endl;
 
 	// Deserialize the raw pointer back to Data
-	Data* deserializedData = serializer.deserialize(raw);
+	Data* deserializedData = Serialize::deserialize(raw);
 	std::cout << "Deserialized data: " << deserializedData->str << ", " << deserializedData->num << std::endl;
 
-	// Assert to ensure the deserialized data matches the original (fails when the code is incorrect)
+	std::cout << "Asserting that the deserialized data matches the original data...";
 	assert(deserializedData->str == data.str);
+	std::cout << " ✅" << std::endl;
 
 	return 0;
 }
