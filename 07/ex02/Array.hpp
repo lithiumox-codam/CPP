@@ -2,6 +2,7 @@
 
 #include <cstddef>
 #include <exception>
+#include <stdexcept>
 
 template <typename T>
 class Array {
@@ -36,17 +37,13 @@ class Array {
 
 	// Subscript operator
 	T& operator[](unsigned int index) {
-		if (index >= _size) {
-			throw std::exception();
-		}
+		if (index >= _size) throw std::out_of_range("Index out of bounds");
 		return _elements[index];
 	}
 
 	// Const subscript operator
 	const T& operator[](unsigned int index) const {
-		if (index >= _size) {
-			throw std::exception();
-		}
+		if (index >= _size) throw std::out_of_range("Index out of bounds");
 		return _elements[index];
 	}
 
