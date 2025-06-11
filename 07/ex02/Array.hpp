@@ -1,5 +1,4 @@
-#ifndef ARRAY_HPP
-#define ARRAY_HPP
+#pragma once
 
 #include <cstddef>
 #include <exception>
@@ -54,5 +53,3 @@ class Array {
 	// Size method
 	unsigned int size() const { return _size; }
 };
-
-#endif

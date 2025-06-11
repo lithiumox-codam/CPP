@@ -25,6 +25,16 @@ int main() {
 		std::cout << "copy[" << i << "] = " << copy[i] << std::endl;
 	}
 
+	// Scope test
+	{
+		Array<int> scopedArray(3);
+		for (unsigned int i = 0; i < scopedArray.size(); i++) {
+			scopedArray[i] = i + 1;
+			std::cout << "scopedArray[" << i << "] = " << scopedArray[i] << std::endl;
+		}
+		std::cout << "Scoped array size: " << scopedArray.size() << std::endl;
+	}
+
 	// Verify deep copy
 	numbers[0] = 100;
 	std::cout << "\nAfter modifying original:" << std::endl;

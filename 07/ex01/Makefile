@@ -10,7 +10,7 @@ $(NAME): $(BUILD_DIR) $(BUILD)
 	@c++ $(BUILD) -o $(NAME)
 
 $(BUILD_DIR)/%.o: %.cpp | $(BUILD_DIR)
-	@c++ -Werror -Wall -Wextra -Wno-implicit-fallthrough -std=c++23 -c $< -o $@
+	@c++ -Werror -Wall -Wextra -Wno-implicit-fallthrough -std=c++17 -c $< -o $@
 
 $(BUILD_DIR):
 	@mkdir -p $(BUILD_DIR)

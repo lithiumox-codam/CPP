@@ -1,6 +1,6 @@
-NAME = functions
+NAME = mutantstack
 SRC = main.cpp
-HEADERS = Functions.hpp
+HEADERS = MutantStack.hpp
 BUILD_DIR = build
 BUILD = $(addprefix $(BUILD_DIR)/, $(SRC:.cpp=.o))
 
@@ -10,7 +10,7 @@ $(NAME): $(BUILD_DIR) $(BUILD)
 	@c++ $(BUILD) -o $(NAME)
 
 $(BUILD_DIR)/%.o: %.cpp | $(BUILD_DIR)
-	@c++ -Werror -Wall -Wextra -Wno-implicit-fallthrough -std=c++17 -c $< -o $@
+	@c++ -Werror -Wall -Wextra -Wno-implicit-fallthrough -std=c++23 -c $< -o $@
 
 $(BUILD_DIR):
 	@mkdir -p $(BUILD_DIR)
@@ -27,7 +27,7 @@ format:
 	@clang-format -i $(SRC) $(HEADERS)
 
 run: all
-	@printf "\n🤖 07/ex00 $(NAME) output:\n\n"
+	@printf "\n🤖 08/ex02 $(NAME) output:\n\n"
 	@./$(NAME)
 
 .PHONY: all clean fclean re
