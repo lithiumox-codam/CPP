@@ -6,10 +6,10 @@
 
 class RPN {
    private:
-	RPN() = delete;
-	RPN(const RPN& src) = delete;
-	RPN& operator=(const RPN& rhs) = delete;
-	~RPN() = delete;
+	RPN() = default;
+	RPN(const RPN& src) = default;
+	RPN& operator=(const RPN& rhs) = default;
+	~RPN() = default;
 
    public:
 	static void evaluate(const std::string& expression);

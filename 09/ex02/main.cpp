@@ -1,3 +1,4 @@
+#include <chrono>
 #include <cstdlib>
 #include <deque>
 #include <iostream>
@@ -5,13 +6,11 @@
 
 #include "PmergeMe.hpp"
 
-long long getCurrentTimeMicro() {
-	struct timeval tv;
-	gettimeofday(&tv, NULL);
-	return tv.tv_sec * 1000000LL + tv.tv_usec;
+std::chrono::microseconds getCurrentTimeMicro() {
+	return std::chrono::duration_cast<std::chrono::microseconds>(
+		std::chrono::high_resolution_clock::now().time_since_epoch());
 }
 
-// Helper to print a container (truncated for large containers)
 template <typename Container>
 void printContainer(const Container& c) {
 	const size_t max_display = 10;
@@ -33,12 +32,12 @@ void printContainer(const Container& c) {
 			std::cout << *end_it << " ";
 		}
 	}
-	std::cout << std::endl;
+	std::cout << '\n';
 }
 
 int main(int argc, char** argv) {
 	if (argc < 2) {
-		std::cerr << "Error: No input sequence provided." << std::endl;
+		std::cerr << "Error: No input sequence provided.\n";
 		return 1;
 	}
 
@@ -47,48 +46,43 @@ int main(int argc, char** argv) {
 		char* end;
 		long val = std::strtol(argv[i], &end, 10);
 		if (*end != '\0') {
-			std::cerr << "Error: Non-numeric input '" << argv[i] << "'" << std::endl;
+			std::cerr << "Error: Non-numeric input '" << argv[i] << "'\n";
 			return 1;
 		}
 		if (val <= 0) {
-			std::cerr << "Error: Negative or zero value '" << val << "'" << std::endl;
+			std::cerr << "Error: Negative or zero value '" << val << "'\n";
 			return 1;
 		}
 		if (val > std::numeric_limits<int>::max()) {
-			std::cerr << "Error: Value too large '" << val << "'" << std::endl;
+			std::cerr << "Error: Value too large '" << val << "'\n";
 			return 1;
 		}
 		initial_sequence.push_back(static_cast<int>(val));
 	}
 
-	// --- Prepare containers ---
 	std::vector<int> vec = initial_sequence;
 	std::deque<int> deq = std::deque<int>(initial_sequence.begin(), initial_sequence.end());
 
-	// --- Print Before ---
 	std::cout << "Before: ";
 	printContainer(vec);
 
-	// --- Time and sort std::vector ---
-	long long start_vec = getCurrentTimeMicro();
+	auto start_vec = getCurrentTimeMicro();
 	PmergeMe::sort(vec);
-	long long end_vec = getCurrentTimeMicro();
-	double time_vec = static_cast<double>(end_vec - start_vec);
+	auto end_vec = getCurrentTimeMicro();
+	auto time_vec = end_vec - start_vec;
 
-	// --- Time and sort std::deque ---
-	long long start_deq = getCurrentTimeMicro();
+	auto start_deq = getCurrentTimeMicro();
 	PmergeMe::sort(deq);
-	long long end_deq = getCurrentTimeMicro();
-	double time_deq = static_cast<double>(end_deq - start_deq);
+	auto end_deq = getCurrentTimeMicro();
+	auto time_deq = end_deq - start_deq;
 
-	// --- Print After and Timings ---
 	std::cout << "After:  ";
 	printContainer(vec);
 
-	std::cout << "Time to process a range of " << argc - 1 << " elements with std::vector : " << time_vec << " us"
-			  << std::endl;
-	std::cout << "Time to process a range of " << argc - 1 << " elements with std::deque  : " << time_deq << " us"
-			  << std::endl;
+	std::cout << "Time to process a range of " << argc - 1 << " elements with std::vector : " << time_vec.count()
+			  << " us\n";
+	std::cout << "Time to process a range of " << argc - 1 << " elements with std::deque  : " << time_deq.count()
+			  << " us\n";
 
 	return 0;
 }
