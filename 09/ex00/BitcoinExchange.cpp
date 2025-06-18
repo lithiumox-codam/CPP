@@ -2,70 +2,137 @@
 
 #include <fstream>
 #include <iostream>
-#include <istream>
 #include <sstream>
-#include <stdexcept>
 
-BitcoinExchange::BitcoinExchange() {
-	// Constructor implementation
-}
+BitcoinExchange::BitcoinExchange() {}
 
-BitcoinExchange::~BitcoinExchange() {
-	// Destructor implementation
-}
+BitcoinExchange::BitcoinExchange(const BitcoinExchange& src) { *this = src; }
 
-BitcoinExchange::BitcoinExchange(const BitcoinExchange &other) : data(other.data) {
-	// Copy constructor implementation
-}
-
-BitcoinExchange &BitcoinExchange::operator=(const BitcoinExchange &other) {
-	if (this != &other) {
-		data = other.data;
+BitcoinExchange& BitcoinExchange::operator=(const BitcoinExchange& rhs) {
+	if (this != &rhs) {
+		this->_data = rhs._data;
 	}
 	return *this;
 }
 
-void BitcoinExchange::parseLine(const std::string &line) {
-	std::istringstream stream(line);
-	std::string date, valueStr;
-	if (std::getline(stream, date, ',') && std::getline(stream, valueStr)) {
-		float value = std::stof(valueStr);
-		validateDate(date);
-		validateValue(value);
-		addValue(date, value);
+BitcoinExchange::~BitcoinExchange() {}
+
+BitcoinExchange::BitcoinExchange(const std::string& dbPath) {
+	std::ifstream dbFile(dbPath.c_str());
+	if (!dbFile.is_open()) {
+		throw std::runtime_error("Error: could not open database file.");
+	}
+
+	std::string line;
+	std::getline(dbFile, line);
+
+	if (line != "date,exchange_rate") {
+		std::cerr << "Error: bad database format." << std::endl;
+	}
+
+	while (std::getline(dbFile, line)) {
+		std::stringstream ss(line);
+		std::string date;
+		std::string rateStr;
+		float rate;
+
+		if (std::getline(ss, date, ',') && std::getline(ss, rateStr)) {
+			char* end;
+			rate = std::strtof(rateStr.c_str(), &end);
+			if (*end == '\0') this->_data[date] = rate;
+		}
 	}
 }
 
-/**
- * @brief When loading data from the data.csv file, we need to do ',' splitting.
- * This is not the same as the splitting in the input.txt file, which uses '|' as a separator.
- *
- * @param filename
- * @param splitChars
- */
-void BitcoinExchange::loadData(const std::string &filename, const std::string &splitChars) {
-	std::ifstream file(filename);
-	std::string line;
+bool BitcoinExchange::_isValidDate(const std::string& date) {
+	if (date.length() != 10) return false;
+	if (date[4] != '-' || date[7] != '-') return false;
 
-	if (!file.is_open()) {
-		throw std::runtime_error("Could not open file: " + filename);
+	for (int i = 0; i < 10; ++i) {
+		if (i == 4 || i == 7) continue;
+		if (!std::isdigit(date[i])) return false;
 	}
 
-	// check the first line (either "date, value" or "date | value")
-	if (std::getline(file, line)) {
-		if (line.find(',') != std::string::npos) {
-			// If the line contains a comma, we assume it's a CSV format
-			while (std::getline(file, line)) {
-				parseLine(line);
-			}
-		} else if (line.find('|') != std::string::npos) {
-			// If the line contains a pipe, we assume it's a different format
-			while (std::getline(file, line)) {
-				std::replace(line.begin(), line.end(), '|', ',');
-				parseLine(line);
-			}
-		} else {
-			throw std::runtime_error("Unknown file format in: " + filename);
+	int year = std::atoi(date.substr(0, 4).c_str());
+	int month = std::atoi(date.substr(5, 2).c_str());
+	int day = std::atoi(date.substr(8, 2).c_str());
+
+	if (year < 2009 || month < 1 || month > 12 || day < 1 || day > 31) {
+		return false;
+	}
+
+	return true;
+}
+
+bool BitcoinExchange::_isValidValue(const std::string& valueStr, float& value) {
+	char* end;
+	value = std::strtof(valueStr.c_str(), &end);
+
+	while (*end != '\0' && std::isspace(*end)) {
+		end++;
+	}
+	if (*end != '\0') return false;	 // Check if the entire string was consumed
+
+	if (value < 0) {
+		std::cout << "Error: not a positive number." << std::endl;
+		return false;
+	}
+	if (value > 1000) {
+		std::cout << "Error: too large a number." << std::endl;
+		return false;
+	}
+	return true;
+}
+
+void BitcoinExchange::processInputFile(const std::string& inputPath) {
+	std::ifstream inputFile(inputPath.c_str());
+	if (!inputFile.is_open()) {
+		std::cout << "Error: could not open file." << std::endl;
+		return;
+	}
+
+	std::string line;
+	std::getline(inputFile, line);
+
+	if (line != "date | value") {
+		std::cout << "Error: bad input => " << line << std::endl;
+		return;
+	}
+
+	while (std::getline(inputFile, line)) {
+		std::stringstream ss(line);
+		std::string date;
+		std::string separator;
+		std::string valueStr;
+
+		ss >> date >> separator >> valueStr;
+
+		if (date.empty() || separator != "|" || valueStr.empty()) {
+			std::cout << "Error: bad input => " << line << std::endl;
+			continue;
 		}
+
+		float value;
+		if (!_isValidDate(date)) {
+			std::cout << "Error: bad input => " << date << std::endl;
+			continue;
+		}
+		if (!_isValidValue(valueStr, value)) {
+			continue;
+		}
+
+		// Find the exchange rate
+		std::map<std::string, float>::iterator it = _data.lower_bound(date);
+
+		if (it == _data.end() || it->first != date) {
+			if (it == _data.begin()) {
+				std::cout << "Error: no data available for or before " << date << std::endl;
+				continue;
+			}
+			--it;  // Decrement to get the closest earlier date
+		}
+
+		float exchangeRate = it->second;
+		std::cout << date << " => " << value << " = " << value * exchangeRate << std::endl;
 	}
 }

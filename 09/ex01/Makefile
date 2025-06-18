@@ -1,16 +1,16 @@
-NAME = mutantstack
-SRC = main.cpp
-HEADERS = MutantStack.hpp
+NAME = RPN
+SRC = main.cpp RPN.cpp
+HEADERS = RPN.hpp
 BUILD_DIR = build
 BUILD = $(addprefix $(BUILD_DIR)/, $(SRC:.cpp=.o))
 
 all: $(NAME)
 
 $(NAME): $(BUILD_DIR) $(BUILD)
-	@c++ $(BUILD) -o $(NAME)
+	@c++ -Werror -Wall -Wextra $(BUILD) -o $(NAME)
 
 $(BUILD_DIR)/%.o: %.cpp | $(BUILD_DIR)
-	@c++ -Werror -Wall -Wextra -Wno-implicit-fallthrough -std=c++23 -c $< -o $@
+	@c++ -Werror -Wall -Wextra -Wno-implicit-fallthrough -std=c++17 -c $< -o $@
 
 $(BUILD_DIR):
 	@mkdir -p $(BUILD_DIR)
@@ -27,7 +27,14 @@ format:
 	@clang-format -i $(SRC) $(HEADERS)
 
 run: all
-	@printf "\n🤖 08/ex02 $(NAME) output:\n\n"
-	@./$(NAME)
+	@printf "\n🤖 09/ex00 $(NAME) output:\n\n"
+	@printf "\nTest: \"8 9 * 9 - 9 - 9 - 4 - 1 +\"\n"
+	@./$(NAME) "8 9 * 9 - 9 - 9 - 4 - 1 +"
+	@printf "\nTest: \"7 7 * 7 -\"\n"
+	@./$(NAME) "7 7 * 7 -"
+	@printf "\nTest: \"1 2 * 2 / 2 * 2 4 - +\"\n"
+	@./$(NAME) "1 2 * 2 / 2 * 2 4 - +"
+	@printf "\nTest: \"(1 + 1)\"\n"
+	@./$(NAME) "(1 + 1)"
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re format run

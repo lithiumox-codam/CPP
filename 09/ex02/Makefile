@@ -1,16 +1,16 @@
-NAME = btc
-SRC = main.cpp BitcoinExchange.cpp
-HEADERS = MutantStack.hpp
+NAME = PmergeMe
+SRC = main.cpp
+HEADERS = PmergeMe.hpp
 BUILD_DIR = build
 BUILD = $(addprefix $(BUILD_DIR)/, $(SRC:.cpp=.o))
 
 all: $(NAME)
 
 $(NAME): $(BUILD_DIR) $(BUILD)
-	@c++ $(BUILD) -o $(NAME)
+	@c++ -Werror -Wall -Wextra $(BUILD) -o $(NAME)
 
 $(BUILD_DIR)/%.o: %.cpp | $(BUILD_DIR)
-	@c++ -Werror -Wall -Wextra -Wno-implicit-fallthrough -std=c++23 -c $< -o $@
+	@c++ -Werror -Wall -Wextra -Wno-implicit-fallthrough -std=c++17 -c $< -o $@
 
 $(BUILD_DIR):
 	@mkdir -p $(BUILD_DIR)
@@ -28,6 +28,6 @@ format:
 
 run: all
 	@printf "\n🤖 08/ex02 $(NAME) output:\n\n"
-	@./$(NAME)
+	@./test.sh
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re format run
